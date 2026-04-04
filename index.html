@@ -3,177 +3,31 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Tales of Della & Oban</title>
+<title>The Tales of Della &amp; Oban</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400&display=swap');
-
   * { margin: 0; padding: 0; box-sizing: border-box; }
-
-  body {
-    background-color: #1a0f0a;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Lato', Georgia, serif;
-    padding: 40px 20px;
-  }
-
-  .book-cover {
-    background: linear-gradient(160deg, #3d1f0e 0%, #6b3520 40%, #3d1f0e 100%);
-    max-width: 680px;
-    width: 100%;
-    border-radius: 4px 16px 16px 4px;
-    box-shadow:
-      -8px 0 0 #1a0a04,
-      -14px 4px 20px rgba(0,0,0,0.8),
-      4px 4px 30px rgba(0,0,0,0.5),
-      inset 8px 0 20px rgba(0,0,0,0.4);
-    overflow: hidden;
-    border-left: 8px solid #1a0a04;
-  }
-
-  .spine-decoration {
-    height: 6px;
-    background: linear-gradient(90deg, #c8a951, #e8c97a, #c8a951);
-  }
-
-  .cover-content {
-    padding: 60px 60px 50px;
-    text-align: center;
-    position: relative;
-  }
-
-  .paw-top {
-    font-size: 42px;
-    margin-bottom: 20px;
-    opacity: 0.7;
-    letter-spacing: 8px;
-  }
-
-  .cover-rule {
-    border: none;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, #c8a951, transparent);
-    margin: 20px auto;
-    width: 80%;
-  }
-
-  .cover-title {
-    font-family: 'Playfair Display', Georgia, serif;
-    font-size: 3.2em;
-    color: #f5e6c8;
-    line-height: 1.15;
-    font-weight: 700;
-    margin: 10px 0;
-    text-shadow: 0 2px 8px rgba(0,0,0,0.5);
-  }
-
-  .cover-subtitle {
-    font-family: 'Playfair Display', Georgia, serif;
-    font-style: italic;
-    color: #c8a951;
-    font-size: 1.2em;
-    margin: 12px 0 24px;
-  }
-
-  .cover-description {
-    color: #d4c4a8;
-    font-size: 0.95em;
-    line-height: 1.8;
-    max-width: 480px;
-    margin: 0 auto 40px;
-  }
-
-  .dedication {
-    font-family: 'Playfair Display', Georgia, serif;
-    font-style: italic;
-    color: #c8a951;
-    font-size: 1em;
-    margin: 30px 0;
-    padding: 20px 30px;
-    border: 1px solid rgba(200,169,81,0.3);
-    border-radius: 4px;
-    background: rgba(0,0,0,0.2);
-  }
-
-  .toc-section {
-    text-align: left;
-    margin-top: 40px;
-  }
-
-  .toc-heading {
-    font-family: 'Playfair Display', Georgia, serif;
-    color: #c8a951;
-    font-size: 1.1em;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    text-align: center;
-    margin-bottom: 24px;
-  }
-
-  .chapter-card {
-    display: block;
-    background: rgba(0,0,0,0.25);
-    border: 1px solid rgba(200,169,81,0.2);
-    border-radius: 8px;
-    padding: 20px 24px;
-    margin-bottom: 14px;
-    text-decoration: none;
-    transition: all 0.25s ease;
-  }
-
-  .chapter-card:hover {
-    background: rgba(200,169,81,0.15);
-    border-color: rgba(200,169,81,0.5);
-    transform: translateX(4px);
-  }
-
-  .chapter-number {
-    color: #c8a951;
-    font-size: 0.75em;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    font-weight: 400;
-  }
-
-  .chapter-title {
-    color: #f5e6c8;
-    font-family: 'Playfair Display', Georgia, serif;
-    font-size: 1.15em;
-    margin: 4px 0;
-  }
-
-  .chapter-date {
-    color: #a08060;
-    font-size: 0.82em;
-  }
-
-  .chapter-count {
-    float: right;
-    color: #c8a951;
-    font-size: 0.85em;
-    margin-top: 4px;
-  }
-
-  .footer-note {
-    color: #7a6040;
-    font-size: 0.78em;
-    text-align: center;
-    margin-top: 36px;
-    line-height: 1.7;
-    font-style: italic;
-  }
-
-  .paw-divider {
-    text-align: center;
-    color: #c8a951;
-    font-size: 18px;
-    margin: 20px 0;
-    opacity: 0.5;
-    letter-spacing: 10px;
-  }
+  body { background-color: #1a0f0a; min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; font-family: 'Lato', Georgia, serif; padding: 40px 20px; }
+  .book-cover { background: linear-gradient(160deg, #3d1f0e 0%, #6b3520 40%, #3d1f0e 100%); max-width: 680px; width: 100%; border-radius: 4px 16px 16px 4px; box-shadow: -8px 0 0 #1a0a04, -14px 4px 20px rgba(0,0,0,0.8), 4px 4px 30px rgba(0,0,0,0.5), inset 8px 0 20px rgba(0,0,0,0.4); overflow: hidden; border-left: 8px solid #1a0a04; }
+  .spine-decoration { height: 6px; background: linear-gradient(90deg, #c8a951, #e8c97a, #c8a951); }
+  .cover-content { padding: 60px 60px 50px; text-align: center; position: relative; }
+  .paw-top { font-size: 42px; margin-bottom: 20px; opacity: 0.7; letter-spacing: 8px; }
+  .cover-rule { border: none; height: 1px; background: linear-gradient(90deg, transparent, #c8a951, transparent); margin: 20px auto; width: 80%; }
+  .cover-title { font-family: 'Playfair Display', Georgia, serif; font-size: 3.2em; color: #f5e6c8; line-height: 1.15; font-weight: 700; margin: 10px 0; text-shadow: 0 2px 8px rgba(0,0,0,0.5); }
+  .cover-subtitle { font-family: 'Playfair Display', Georgia, serif; font-style: italic; color: #c8a951; font-size: 1.2em; margin: 12px 0 24px; }
+  .cover-description { color: #d4c4a8; font-size: 0.95em; line-height: 1.8; max-width: 480px; margin: 0 auto 40px; }
+  .dedication { font-family: 'Playfair Display', Georgia, serif; font-style: italic; color: #c8a951; font-size: 1em; margin: 30px 0; padding: 20px 30px; border: 1px solid rgba(200,169,81,0.3); border-radius: 4px; background: rgba(0,0,0,0.2); }
+  .toc-section { text-align: left; margin-top: 40px; }
+  .toc-heading { font-family: 'Playfair Display', Georgia, serif; color: #c8a951; font-size: 1.1em; letter-spacing: 3px; text-transform: uppercase; text-align: center; margin-bottom: 24px; }
+  .chapter-card { display: block; background: rgba(0,0,0,0.25); border: 1px solid rgba(200,169,81,0.2); border-radius: 8px; padding: 20px 24px; margin-bottom: 14px; text-decoration: none; transition: all 0.25s ease; }
+  .chapter-card:hover { background: rgba(200,169,81,0.15); border-color: rgba(200,169,81,0.5); transform: translateX(4px); }
+  .chapter-number { color: #c8a951; font-size: 0.75em; letter-spacing: 2px; text-transform: uppercase; font-weight: 400; }
+  .chapter-name { color: #f5e6c8; font-family: 'Playfair Display', Georgia, serif; font-size: 1.15em; margin: 4px 0; }
+  .chapter-date { color: #a08060; font-size: 0.82em; }
+  .chapter-count { float: right; color: #c8a951; font-size: 0.85em; margin-top: 4px; }
+  .footer-note { color: #7a6040; font-size: 0.78em; text-align: center; margin-top: 36px; line-height: 1.7; font-style: italic; }
+  .paw-divider { text-align: center; color: #c8a951; font-size: 18px; margin: 20px 0; opacity: 0.5; letter-spacing: 10px; }
+  .year-label { color: #c8a951; font-size: 0.7em; letter-spacing: 3px; text-transform: uppercase; text-align: center; margin: 24px 0 10px; opacity: 0.6; }
 </style>
 </head>
 <body>
@@ -191,16 +45,16 @@
     <hr class="cover-rule">
 
     <p class="cover-description">
-      A collection of dispatches from the front lines of dog-walking in Marin County —
-      where two extraordinary dogs scheme, philosophize, run heists, star in movies,
-      and occasionally allow their human to tag along.
+      A complete collection of dispatches from the front lines of dog-walking in Marin County —
+      four and a half years of schemes, heists, elections, movie deals, and walks that somehow
+      always ended with the dogs getting what they wanted.
     </p>
 
     <div class="dedication">
       Dedicated to Della Moneybags Rothschild —<br>
       muse, schemer, carrot enthusiast, and sometimes bully<br>
       when Byron was near a snack.<br><br>
-      <em>"If that book ever gets made I don't see a reason not to<br>
+      <em>"If that book ever gets made I don&rsquo;t see a reason not to<br>
       dedicate it to her."</em> — Byron
     </div>
 
@@ -209,39 +63,71 @@
     <div class="toc-section">
       <p class="toc-heading">— Table of Contents —</p>
 
+      <p class="year-label">The Early Years</p>
+
       <a href="chapter1.html" class="chapter-card">
-        <span class="chapter-count">47 stories →</span>
+        <span class="chapter-count">74 stories →</span>
         <div class="chapter-number">Chapter One</div>
-        <div class="chapter-title">The Early Adventures &amp; The Air Bud Chronicles</div>
-        <div class="chapter-date">December 2024 – June 2025</div>
+        <div class="chapter-name">The Origin Stories</div>
+        <div class="chapter-date">July – December 2021</div>
       </a>
 
       <a href="chapter2.html" class="chapter-card">
-        <span class="chapter-count">24 stories →</span>
+        <span class="chapter-count">82 stories →</span>
         <div class="chapter-number">Chapter Two</div>
-        <div class="chapter-title">Summer Schemes &amp; Fall Capers</div>
-        <div class="chapter-date">July – October 2025</div>
+        <div class="chapter-name">The Golden Age</div>
+        <div class="chapter-date">2022</div>
       </a>
 
       <a href="chapter3.html" class="chapter-card">
-        <span class="chapter-count">16 stories →</span>
+        <span class="chapter-count">39 stories →</span>
         <div class="chapter-number">Chapter Three</div>
-        <div class="chapter-title">The Winter Season</div>
-        <div class="chapter-date">November – December 2025</div>
+        <div class="chapter-name">The Third Year</div>
+        <div class="chapter-date">2023</div>
       </a>
 
       <a href="chapter4.html" class="chapter-card">
-        <span class="chapter-count">23 stories →</span>
+        <span class="chapter-count">57 stories →</span>
         <div class="chapter-number">Chapter Four</div>
-        <div class="chapter-title">After Della</div>
+        <div class="chapter-name">The Long Fourth Year</div>
+        <div class="chapter-date">January – November 2024</div>
+      </a>
+
+      <p class="year-label">The Final Chapters</p>
+
+      <a href="chapter5.html" class="chapter-card">
+        <span class="chapter-count">47 stories →</span>
+        <div class="chapter-number">Chapter Five</div>
+        <div class="chapter-name">The Early Adventures &amp; The Air Bud Chronicles</div>
+        <div class="chapter-date">December 2024 – June 2025</div>
+      </a>
+
+      <a href="chapter6.html" class="chapter-card">
+        <span class="chapter-count">24 stories →</span>
+        <div class="chapter-number">Chapter Six</div>
+        <div class="chapter-name">Summer Schemes &amp; Fall Capers</div>
+        <div class="chapter-date">July – October 2025</div>
+      </a>
+
+      <a href="chapter7.html" class="chapter-card">
+        <span class="chapter-count">16 stories →</span>
+        <div class="chapter-number">Chapter Seven</div>
+        <div class="chapter-name">The Winter Season</div>
+        <div class="chapter-date">November – December 2025</div>
+      </a>
+
+      <a href="chapter8.html" class="chapter-card">
+        <span class="chapter-count">23 stories →</span>
+        <div class="chapter-number">Chapter Eight</div>
+        <div class="chapter-name">After Della</div>
         <div class="chapter-date">January – April 2026</div>
       </a>
 
     </div>
 
     <p class="footer-note">
-      All stories collected from real text messages sent by Byron Deme<br>
-      to the Lopin family during dog walks from 2024 – 2026.
+      381 stories collected from real text messages sent by Byron Deme<br>
+      to the Lopin family during dog walks from July 2021 – April 2026.
     </p>
 
   </div>

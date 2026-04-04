@@ -3,207 +3,36 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Chapter 3 – The Tales of Della & Oban</title>
+<title>Chapter Three – The Tales of Della &amp; Oban</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400&display=swap');
-
   * { margin: 0; padding: 0; box-sizing: border-box; }
-
-  body {
-    background-color: #FDF8EF;
-    font-family: 'Lato', Georgia, serif;
-    color: #2e1a0e;
-  }
-
-  .page-header {
-    background: linear-gradient(160deg, #1a1a3a 0%, #2e2e6a 60%, #1a1a3a 100%);
-    padding: 50px 30px 40px;
-    text-align: center;
-    border-bottom: 4px solid #8a9ac8;
-  }
-
-  .back-link {
-    display: inline-block;
-    color: #8a9ac8;
-    text-decoration: none;
-    font-size: 0.85em;
-    letter-spacing: 1px;
-    margin-bottom: 20px;
-    opacity: 0.8;
-  }
+  body { background-color: #EEE8F0; font-family: 'Lato', Georgia, serif; color: #1e0a2e; }
+  .page-header { background: linear-gradient(160deg, #1e0a2e 0%, #3a1a5c 60%, #1e0a2e 100%); padding: 50px 30px 40px; text-align: center; border-bottom: 4px solid #7a5a9a; }
+  .back-link { display: inline-block; color: #7a5a9a; text-decoration: none; font-size: 0.85em; letter-spacing: 1px; margin-bottom: 20px; opacity: 0.8; }
   .back-link:hover { opacity: 1; }
-
-  .chapter-label {
-    color: #8a9ac8;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-    font-size: 0.8em;
-    margin-bottom: 12px;
-  }
-
-  .chapter-title {
-    font-family: 'Playfair Display', Georgia, serif;
-    color: #f0f0f8;
-    font-size: 2.4em;
-    font-weight: 700;
-    line-height: 1.2;
-    margin-bottom: 10px;
-  }
-
-  .chapter-dates {
-    font-family: 'Playfair Display', Georgia, serif;
-    font-style: italic;
-    color: #8a9ac8;
-    font-size: 1em;
-    margin-bottom: 16px;
-  }
-
-  .chapter-intro {
-    color: #c4c4d8;
-    max-width: 560px;
-    margin: 0 auto;
-    font-size: 0.92em;
-    line-height: 1.7;
-  }
-
-  .content {
-    max-width: 720px;
-    margin: 0 auto;
-    padding: 50px 30px 80px;
-  }
-
-  .story {
-    margin-bottom: 52px;
-    padding-bottom: 48px;
-    border-bottom: 1px solid #e0d0b8;
-    position: relative;
-  }
-
+  .chapter-label { color: #7a5a9a; letter-spacing: 4px; text-transform: uppercase; font-size: 0.8em; margin-bottom: 12px; }
+  .chapter-title { font-family: 'Playfair Display', Georgia, serif; color: #f5e6c8; font-size: 2.4em; font-weight: 700; line-height: 1.2; margin-bottom: 10px; }
+  .chapter-dates { font-family: 'Playfair Display', Georgia, serif; font-style: italic; color: #7a5a9a; font-size: 1em; margin-bottom: 16px; }
+  .chapter-intro { color: #d4c4a8; max-width: 560px; margin: 0 auto; font-size: 0.92em; line-height: 1.7; }
+  .content { max-width: 720px; margin: 0 auto; padding: 50px 30px 80px; }
+  .story { margin-bottom: 52px; padding-bottom: 48px; border-bottom: 1px solid rgba(0,0,0,0.1); position: relative; }
   .story:last-child { border-bottom: none; }
-
-  .story-header {
-    display: flex;
-    align-items: baseline;
-    gap: 16px;
-    margin-bottom: 14px;
-    flex-wrap: wrap;
-  }
-
-  .story-date {
-    background: #2e2e6a;
-    color: #f0f0f8;
-    font-size: 0.72em;
-    letter-spacing: 1.5px;
-    padding: 4px 12px;
-    border-radius: 20px;
-    white-space: nowrap;
-  }
-
-  .story-title {
-    font-family: 'Playfair Display', Georgia, serif;
-    font-size: 1.4em;
-    color: #1a1a3a;
-    font-weight: 700;
-  }
-
-  .story-body {
-    font-size: 1.02em;
-    line-height: 1.85;
-    color: #2e1a0e;
-  }
-
+  .story-header { display: flex; align-items: baseline; gap: 16px; margin-bottom: 14px; flex-wrap: wrap; }
+  .story-date { background: #3a1a5c; color: #f5e6c8; font-size: 0.72em; letter-spacing: 1.5px; padding: 4px 12px; border-radius: 20px; white-space: nowrap; }
+  .story-title { font-family: 'Playfair Display', Georgia, serif; font-size: 1.4em; color: #2a0e3c; font-weight: 700; }
+  .story-body { font-size: 1.02em; line-height: 1.85; color: #1e0a2e; }
   .story-body p { margin-bottom: 12px; }
-
-  .reaction {
-    font-size: 0.85em;
-    color: #8a6a50;
-    font-style: italic;
-    margin-top: 12px;
-    padding-left: 16px;
-    border-left: 2px solid #8a9ac8;
-  }
-
-  .paw-divider {
-    text-align: center;
-    color: #2e2e6a;
-    font-size: 16px;
-    margin: 40px 0 36px;
-    letter-spacing: 12px;
-    opacity: 0.5;
-  }
-
-  .nav-footer {
-    background: #1a1a3a;
-    padding: 30px;
-    text-align: center;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .nav-link {
-    color: #8a9ac8;
-    text-decoration: none;
-    font-size: 0.9em;
-    letter-spacing: 1px;
-    padding: 10px 20px;
-    border: 1px solid rgba(138,154,200,0.4);
-    border-radius: 4px;
-    transition: all 0.2s;
-  }
-  .nav-link:hover {
-    background: rgba(138,154,200,0.15);
-    border-color: #8a9ac8;
-  }
-
-  .nav-center {
-    color: #f0f0f8;
-    font-family: 'Playfair Display', Georgia, serif;
-    font-size: 0.95em;
-  }
-
-  .pullquote {
-    font-family: 'Playfair Display', Georgia, serif;
-    font-style: italic;
-    font-size: 1.1em;
-    color: #2e2e6a;
-    border-left: 3px solid #8a9ac8;
-    padding: 10px 20px;
-    margin: 16px 0;
-    background: rgba(138,154,200,0.07);
-    border-radius: 0 4px 4px 0;
-  }
-
-  .series-banner {
-    background: rgba(138,154,200,0.1);
-    border: 1px solid rgba(138,154,200,0.3);
-    border-radius: 8px;
-    padding: 14px 20px;
-    margin-bottom: 24px;
-    font-style: italic;
-    color: #2e2e6a;
-    font-size: 0.9em;
-    text-align: center;
-  }
-
-  .story-photo {
-    margin: 20px 0 8px;
-    text-align: center;
-  }
-  .story-photo img {
-    max-width: 100%;
-    width: 380px;
-    border-radius: 6px;
-    box-shadow: 0 4px 18px rgba(0,0,0,0.18);
-    display: inline-block;
-  }
-  .story-photo figcaption {
-    font-style: italic;
-    font-size: 0.82em;
-    color: #8a6a50;
-    margin-top: 7px;
-    letter-spacing: 0.3px;
-  }
+  .reaction { font-size: 0.85em; color: #8a6a50; font-style: italic; margin-top: 12px; padding-left: 16px; border-left: 2px solid #7a5a9a; opacity: 0.8; }
+  .paw-divider { text-align: center; color: #7a5a9a; font-size: 16px; margin: 40px 0 36px; letter-spacing: 12px; opacity: 0.5; }
+  .nav-footer { background: #1e0a2e; padding: 30px; text-align: center; display: flex; justify-content: space-between; align-items: center; max-width: 100%; }
+  .nav-link { color: #7a5a9a; text-decoration: none; font-size: 0.9em; letter-spacing: 1px; padding: 10px 20px; border: 1px solid rgba(200,169,81,0.4); border-radius: 4px; transition: all 0.2s; }
+  .nav-link:hover { background: rgba(200,169,81,0.15); border-color: #7a5a9a; }
+  .nav-center { color: #f5e6c8; font-family: 'Playfair Display', Georgia, serif; font-size: 0.95em; }
+  .pullquote { font-family: 'Playfair Display', Georgia, serif; font-style: italic; font-size: 1.15em; color: #3a1a5c; border-left: 3px solid #7a5a9a; padding: 10px 20px; margin: 16px 0; background: rgba(0,0,0,0.04); border-radius: 0 4px 4px 0; }
+  .story-photo { margin: 20px 0 8px; text-align: center; }
+  .story-photo img { max-width: 100%; width: 380px; border-radius: 6px; box-shadow: 0 4px 18px rgba(0,0,0,0.18); display: inline-block; }
+  .story-photo figcaption { font-style: italic; font-size: 0.82em; color: #8a6a50; margin-top: 7px; }
 </style>
 </head>
 <body>
@@ -211,245 +40,523 @@
 <div class="page-header">
   <a href="index.html" class="back-link">← Back to Table of Contents</a>
   <div class="chapter-label">Chapter Three</div>
-  <h1 class="chapter-title">The Winter Season</h1>
-  <p class="chapter-dates">November – December 2025</p>
-  <p class="chapter-intro">The nights grow longer. Oban makes a solo trip to Quebec that raises more questions than answers. Della conquers a 72-hour hike, a steak competition, and Bigfoot's debt. The year closes with 23 rotisserie chickens hidden somewhere in the house.</p>
+  <h1 class="chapter-title">The Third Year</h1>
+  <p class="chapter-dates">2023</p>
+  <p class="chapter-intro">A quieter chapter. The empire consolidates. Oban develops opinions. Della diversifies into international cuisine. Byron attempts to establish a system of rules. He fails.</p>
 </div>
 
 <div class="content">
 
-  <!-- STORY 1 -->
   <div class="story">
     <div class="story-header">
-      <span class="story-date">NOV 1, 2025</span>
-      <h2 class="story-title">72oz Steak Competition Day</h2>
-    </div>
-    <div class="story-body">
-      <p>As we all know, the last Saturday of every month that's an air sign (♎ represent!) is 72oz steak competition day. Not gonna sugar coat it. Della had a hard time keeping up with Oban today. That was until I noticed Della had been holding her knife in reverse and was using a plastic spork in her other paw.</p>
-      <p>She had no problem catching up and passing Oban after that. And basically lapped both of us during the side challenge of a basket of loaded baked potatoes with a bucket of grandma's five alarm chili.</p>
-    </div>
-  </div>
-
-  <!-- STORY 2 -->
-  <div class="story">
-    <div class="story-header">
-      <span class="story-date">NOV 4, 2025</span>
-      <h2 class="story-title">A Warning About This Week's Photos</h2>
-    </div>
-    <div class="story-body">
-      <p>Gotta warn everyone. This week's photos are a little too spicy if you ask me. Della finally looked at the data and found out that charm and a disarming smile gets marks to trust 67% faster, which leads to an overall confidence game or rug pull to produce almost 40% more carrots.</p>
-      <p>I've seen it all and even I'm stopping by the grocery store to pick up some dipping carrot sticks for the dog who drips charisma.</p>
-    </div>
-  </div>
-
-  <!-- STORY 3 -->
-  <div class="story">
-    <div class="story-header">
-      <span class="story-date">NOV 8, 2025</span>
-      <h2 class="story-title">Catcalling, Dog Edition</h2>
-    </div>
-    <div class="story-body">
-      <p>Had some trouble today. We were walking by a construction site and a bunch of the workers tried to catcall Della, and a few of the other workers — who were all conveniently dressed like Nathan Lane in <em>The Birdcage</em> — also tried to catcall Oban. But it became rather apparent that you can't quite catcall a dog.</p>
-      <p>We all stopped and formed a circle to discuss how to make it more natural. One man floated the idea of just calling it "unwanted harassment," but we all agreed that if we did that we'd have to admit the underlying toxic behavior, and they would force us to process and mature as individuals in an evolving society. So we shot that down immediately, as none of us wanted to improve.</p>
-      <p>Then some alternate catchy names were spitballed:</p>
-      <p>— Doggy Howl<br>
-      — Puppy Pass<br>
-      — Giving someone a "Ruff Time"<br>
-      — Dog Whistling</p>
-      <p>But none of them really stuck. And the foreman found us not soon after and broke it up, but not before agreeing to let us meet again next week to discuss it further. So we shall see.</p>
-    </div>
-  </div>
-
-  <!-- STORY 4 -->
-  <div class="story">
-    <div class="story-header">
-      <span class="story-date">NOV 11, 2025</span>
-      <h2 class="story-title">The Chainsaw Equation</h2>
-    </div>
-    <div class="story-body">
-      <p>Do you see this. This simple math equation:</p>
-      <div class="pullquote">Oban + (some fool accidentally using the s-q-u-i-r-r-e-l word × a paw-friendly chainsaw left unattended) = absolutely carnage for mother nature.</div>
-    </div>
-  </div>
-
-  <!-- STORY 5 -->
-  <div class="story">
-    <div class="story-header">
-      <span class="story-date">NOV 16, 2025</span>
-      <h2 class="story-title">The 72-Hour Hike</h2>
-    </div>
-    <div class="story-body">
-      <p>Lots of amateurs think a one-hour hike can't possibly take more than an hour. But little do they comprehend that it could take up to 72 hours to get the perfect shot. And while you cannot put a price on that — you can provide receipts for all the Red Lobster crab n' biscuits with mustard dip you had to buy to bribe Della not to walk away.</p>
-      <p>And at the end of the day, who can really say what the cap is on Red Lobster appetizers for the perfect photo? The answer is my credit card company. They say when I've bought enough.</p>
-    </div>
-  </div>
-
-  <!-- STORY 6 -->
-  <div class="story">
-    <div class="story-header">
-      <span class="story-date">NOV 18, 2025</span>
-      <h2 class="story-title">Daylight Savings</h2>
-    </div>
-    <div class="story-body">
-      <p>This daylight savings time has made the hours before dinner a nightmare for all.</p>
-    </div>
-  </div>
-
-  <!-- STORY 7 -->
-  <div class="story">
-    <div class="story-header">
-      <span class="story-date">NOV 26, 2025</span>
-      <h2 class="story-title">The Canadian-Cornish-Gameday Hotdog Bird</h2>
-    </div>
-    <div class="story-body">
-      <p>The elusive Canadian-Cornish-Gameday Hotdog bird has to migrate south to Tijuana for the winter (and horse race gambling) before it can fly back north for salmon season (and to avoid paying their bookies). But during that long 2-week trip (Greyhound bus), their normal Canadian camouflage — hockey jerseys &amp; Canadian bacon perfume — is more a liability than an asset.</p>
-    </div>
-  </div>
-
-  <!-- STORY 8 -->
-  <div class="story">
-    <div class="story-header">
-      <span class="story-date">NOV 29, 2025</span>
-      <h2 class="story-title">Oban's Private Plane</h2>
+      <span class="story-date">JAN 4, 2023</span>
+      <h2 class="story-title">Looks like Oban had been watching those…</h2>
     </div>
     <figure class="story-photo">
-      <img src="photos/oban_alert.jpg" alt=""Yeah, sure." — Oban, boarding." loading="lazy">
-      <figcaption>"Yeah, sure." — Oban, boarding.</figcaption>
+      <img src="photos/ch3_2023_01_04_001.jpg" alt="Looks like Oban had been watching those…" loading="lazy">
     </figure>
     <div class="story-body">
-      <p>Only photos of Della today. Oban said he didn't have time and was late for a flight to handle some business with "old Ben." I asked if he meant the Jedi or the clock tower and he chuckled saying "yeah, sure." Not sure what he means by that, but good luck to him as he gets on his private plane.</p>
+      <p>Looks like Oban had been watching those 3am televangelists again. Cause he's convinced this is the rain that's gonna be bigger than Noah. Now he's got me and Della out here looking for two of every kind of bacon, burger, biscuit, chicken, and french fry. In the hopes of preserving them and repopulating the world once everything else has flooded away.</p>
+      <p class="reaction">Thomas: Water boy 😍</p>
+      <p class="reaction">Mom: And a happy new year to you as well. Good thing you're keeping an eye on those pups!</p>
+      <p class="reaction">Dad: Love this</p>
     </div>
   </div>
-
+  <div class="story">
+    <div class="story-header">
+      <span class="story-date">JAN 23, 2023</span>
+      <h2 class="story-title">Had the strongest conversation with Della and Oban today.</h2>
+    </div>
+    <figure class="story-photo">
+      <img src="photos/ch3_2023_01_23_002.jpg" alt="Had the strongest conversation with Della and Oban today." loading="lazy">
+    </figure>
+    <div class="story-body">
+      <p>Had the strongest conversation with Della and Oban today. As we all know their mathematical skills are more reliant on confidence than equations. So when they found out Sean Connery's future documentary Zardoz takes place in 2293. After some quick napkin math 260 years converted into dog years. Well Della is excited to put on that costume since it's only a couple of dinners away(her way of measuring time). So look forward to seeing thick mustaches and ponytails on these pups, in a couple of dinners.</p>
+    </div>
+  </div>
+  <div class="story">
+    <div class="story-header">
+      <span class="story-date">JAN 31, 2023</span>
+      <h2 class="story-title">Had a real busy day.</h2>
+    </div>
+    <figure class="story-photo">
+      <img src="photos/ch3_2023_01_31_003.jpg" alt="Had a real busy day." loading="lazy">
+    </figure>
+    <div class="story-body">
+      <p>Had a real busy day. Oban started a moving company, and Della started a locksmith business. Apparently everyone was moving on this one street. It was pretty hectic since Della had to change the locks on everyone's door before Oban could move their stuff, it seemed rather off that people only wanted their TV's and jewelry moved. But Oban said it's cause the expensive stuff was too delicate to leave to normal movers. One old lady was home when Della came to change her locks. She seemed pretty startled so Della suggested we reschedule that house for another day. It's great to work with such entrepreneurs.</p>
+      <p class="reaction">Mom: I really hope that you're keeping track of these somewhere. They would make a hilarious book.</p>
+      <p class="reaction">Adam:  🤓</p>
+      <p class="reaction">Dad: Made me laugh again. Thank you </p>
+    </div>
+  </div>
+  <div class="story">
+    <div class="story-header">
+      <span class="story-date">MAR 8, 2023</span>
+      <h2 class="story-title">And we are back to our regularly scheduled updates.</h2>
+    </div>
+    <figure class="story-photo">
+      <img src="photos/ch3_2023_03_08_004.jpg" alt="And we are back to our regularly scheduled updates." loading="lazy">
+    </figure>
+    <div class="story-body">
+      <p>And we are back to our regularly scheduled updates.</p>
+      <p>Here we can see the pups refusing to look left and gaze upon unspeakable cosmic horrors beyond our realms reality ungoverned by physical laws.</p>
+      <p>Instead they chose to admire a lovely larch tree on the right.</p>
+    </div>
+  </div>
+  <div class="story">
+    <div class="story-header">
+      <span class="story-date">MAR 13, 2023</span>
+      <h2 class="story-title">Very important day.</h2>
+    </div>
+    <figure class="story-photo">
+      <img src="photos/ch3_2023_03_13_005.jpg" alt="Very important day." loading="lazy">
+    </figure>
+    <div class="story-body">
+      <p>Very important day.  Della and Oban were checking the grass for water damage and taste. When Della dropped the line. &quot;It's as wet as a dry martini out here.&quot;  A nearby dapper looking hiker lost his monocle in a puddle of mud. We were all in shock such a bouquet of sailor  aphorisms could pass through such a prim and proper pupper. We'll all need to carefully monitor her viewing habits in the future. Unless we wish for those proper puppy etiquette classes to go to waste.</p>
+    </div>
+  </div>
+  <div class="story">
+    <div class="story-header">
+      <span class="story-date">MAR 20, 2023</span>
+      <h2 class="story-title">Starting a truffle business.</h2>
+    </div>
+    <figure class="story-photo">
+      <img src="photos/ch3_2023_03_20_006.jpg" alt="Starting a truffle business." loading="lazy">
+    </figure>
+    <div class="story-body">
+      <p>Starting a truffle business. So far no truffles but Della did find out one of the neighbors leaves there back door unlocked so she's confident they can find some truffles in there once the heat dies down from the last house she went into truffle hunting.</p>
+    </div>
+  </div>
+  <div class="story">
+    <div class="story-header">
+      <span class="story-date">MAR 22, 2023</span>
+      <h2 class="story-title">Very disappointing day.</h2>
+    </div>
+    <figure class="story-photo">
+      <img src="photos/ch3_2023_03_22_007.jpg" alt="Very disappointing day." loading="lazy">
+    </figure>
+    <div class="story-body">
+      <p>Very disappointing day. Oban wrote the most wonderful poem. He recited a section for me. &quot; Here comes the rain again. Falling on my head like a memory.&quot; Or at least it would have been a wonderful poem had his iPod neon pink iPod mini not fallen out of his collar and I noticed he was listening to the Eurythmics. Plagiarism on a day like today. Even Della looks embarrassed for once.</p>
+    </div>
+  </div>
+  <div class="story">
+    <div class="story-header">
+      <span class="story-date">MAR 31, 2023</span>
+      <h2 class="story-title">No sign yet but Della says we're close.</h2>
+    </div>
+    <figure class="story-photo">
+      <img src="photos/ch3_2023_03_31_008.jpg" alt="No sign yet but Della says we're close." loading="lazy">
+    </figure>
+    <div class="story-body">
+      <p>No sign yet but Della says we're close. When I pulled up the morning and Della said someone had snuck in and eaten her whole breakfast then snuck out I was livid. Not to worry I made sure to stop by the golden arches for her &quot;briefcase of fries&quot; special breakfast. And then we started our hunt to find the monster who stole Della's breakfast.</p>
+    </div>
+  </div>
+  <div class="story">
+    <div class="story-header">
+      <span class="story-date">APR 5, 2023</span>
+      <h2 class="story-title">Got some good candid shots for their portfolio.</h2>
+    </div>
+    <div class="story-body">
+      <p>Got some good candid shots for their portfolio. And you can see Della practicing for her role in Macbeth. (She plays one of the dead guards) thankfully they can run over her snoring.</p>
+    </div>
+  </div>
+  <div class="story">
+    <div class="story-header">
+      <span class="story-date">APR 18, 2023</span>
+      <h2 class="story-title">A very busy day.</h2>
+    </div>
+    <div class="story-body">
+      <p>A very busy day. Della's report on what, where, and how all the flowers smell/locations should be on everyone's desk by Friday. Oban just had his annual review so he's phoning it in for the next few weeks because he thinks everyone will forget about it till his next review is closer.</p>
+    </div>
+  </div>
   <div class="paw-divider">🐾 &nbsp; 🐾 &nbsp; 🐾</div>
 
-  <!-- THE AIRPORT TRILOGY -->
-  <div class="series-banner">✈️ &nbsp; The Airport Trilogy: Parts I, II & III &nbsp; ✈️</div>
-
-  <!-- STORY 9 -->
   <div class="story">
     <div class="story-header">
-      <span class="story-date">DEC 2, 2025</span>
-      <h2 class="story-title">The Airport Story, Part I</h2>
+      <span class="story-date">APR 24, 2023</span>
+      <h2 class="story-title">I didn't even tell them about Easter this year.</h2>
     </div>
+    <figure class="story-photo">
+      <img src="photos/ch3_2023_04_24_011.jpg" alt="I didn't even tell them about Easter this year." loading="lazy">
+    </figure>
     <div class="story-body">
-      <p>Another day, another Della. It's strange. Oban hasn't wanted to be in any pictures since I picked him up from the airport a few days ago. I remember it like it was yesterday — even though it was technically last week.</p>
-      <p>I remember having to go to the urinal for the fifth time that night because of all the coffee, but I needed to stay awake since Oban's plane didn't get in till midnight and I accidentally arrived 6 hours early. I found Kevin in front of the same stall I had left him at since I last went. Kevin told me he got nervous about travel and it caused anxiety about bathrooms and inciting fears of pissing his pants. Said he also tends to talk about his mother. Not sure why his mother was getting bad checks but I wished them both well all the same.</p>
-      <p>As I was washing my hands, Kevin asked when my flight was and I told him I was actually waiting for someone who gets in at midnight from Quebec. Kevin said I should check arrivals since the last flight from Quebec arrived 20 minutes ago.</p>
-      <p>I laughed it off since Oban had sent me a picture of his ticket, and it clearly said 'arrival 12:00AM.' But just to be certain I wandered over to baggage claim, where the luggage was indeed being fought over like novice Roman gladiators fighting over the net because they think that will stop the loose tiger. I was about to go get another cup of coffee before the Starbucks closed. Turning away, I saw someone behind the tumble of bags, limbs, and human depravity. Someone familiar. Unmistakably Oban.</p>
-      <p>Until the chaos of modern travel obscured my view. I was about to investigate when my bladder told me it was time to tell Kevin he may have been right. But it also told me to hurry or I was gonna need a change of pants before I confronted anyone about the mystery unfolding...</p>
-      <p><em>(Continued in Part II)</em></p>
+      <p>I didn't even tell them about Easter this year. Yet Della and Oban are head deep in the weeds looking for E. G. G. S. I can't even type the full word without their ears perking up. At least with 4th of July they know to only check the grill.</p>
     </div>
   </div>
-
-  <!-- STORY 10 -->
   <div class="story">
     <div class="story-header">
-      <span class="story-date">DEC 7, 2025</span>
-      <h2 class="story-title">The Airport Story, Part II</h2>
+      <span class="story-date">MAY 10, 2023</span>
+      <h2 class="story-title">Oh they're keeping their heads down today.</h2>
     </div>
+    <figure class="story-photo">
+      <img src="photos/ch3_2023_05_10_012.jpg" alt="Oh they're keeping their heads down today." loading="lazy">
+    </figure>
     <div class="story-body">
-      <p>The clock was crawling ever closer to midnight and I still needed to ward off the sleepiness, since the coffee shop had closed and the janitor — in what I suspected was a fake Italian accent — told me that "da bathroom isa off limits for you." So I went outside to get some fresh air.</p>
-      <p>The night was dark and black like Oban's coat. The dark blackness of the night was cut up with the white brightness of the passing headlights that also looked like Oban's coat, but more the belly part. The green and red flashes of the distant planes didn't really remind me of Oban's coat. The red and green flashing blips of the airplanes coming from destinations unknown and going out to destinations also unknown didn't remind me as much of Oban or his coat.</p>
-      <p>I was in the middle of deciding if the neon-lit construction orange sign jogged any connection to Oban or his lustrous black and white coat when he came up behind me.</p>
-      <p><em>(Finished in Part III)</em></p>
+      <p>Oh they're keeping their heads down today. After getting stopped by a park ranger asking if we'd seen any cougars and coyotes. Della tried to slip a $20 into the ranger's pocket. Then Oban tried to impersonate an FPI(Federal Puppy Intelligence) agent. It took a lot of convincing to keep the ranger from arresting both of them. Where do they pick up these habits I'll never know.</p>
     </div>
   </div>
-
-  <!-- STORY 11 -->
   <div class="story">
     <div class="story-header">
-      <span class="story-date">DEC 10, 2025</span>
-      <h2 class="story-title">The Airport Story, Part III: Oban Confesses</h2>
+      <span class="story-date">JUN 12, 2023</span>
+      <h2 class="story-title">The Crime Scene</h2>
     </div>
     <div class="story-body">
-      <p>Oban looked exhausted. Not just from travel, but drained emotionally — as if he'd struggled greatly to help someone move a couch recently. We walked to the car without a word and headed home.</p>
-      <p>I could tell something was on his mind as he wore his novelty thinking cap that reads "Thinking ain't easy, but I'm trying." I could also tell he needed more than a thinking cap to think through whatever was troubling him. I decided to break the uneasy silence:</p>
-      <p>"Unfortunately I left my thinking socks at home and the police confiscated all the thinking vodka I kept in the glove box, and under my seat, and in the center console, and just behind the passenger's back rest. Otherwise I'd offer to help you think."</p>
-      <p>He stared at me a moment with those big olive eyes. Then it happened. Like Moses parting the sea, or Taylor Swift's security parting a crowd — my little question separated all the self-restraint Oban had in him and he started talking, singing like a choir of canaries. Oban told me everything.</p>
-      <p>About a month ago Oban had met a strange dog at the groomers, who told him about a problem he had — a person who was ruining his life, some gingerbread man who had built a gingerbread RV that he parked in a nearby park and was driving down pupperty values. Likewise, Oban had told this stranger about the squirrels and how they vexed him so. So the stranger schemed up a plan to help each other — where Oban would fly out and eat the gingerbread man and his gingerbread RV, then a few weeks later the strange dog would hire some witches off of Etsy to turn all the squirrels into squirrel/gargoyle statues.</p>
-      <p>And now Oban is grappling with the feelings of his actions. Mostly car sick, as it was a full person-sized gingerbread man and the gingerbread RV was equally proportional. That is a LOT of ginger for one dog.</p>
+      <p>Just a normal day with establishing shots in front of easily identifiable land marks with today's newspaper and the time stamp makes it clear these pups are out on a marin hike and in no way could be in San Luis Obispo between 10:45am and 11:07am especially since it's a four hour drive and neither of them their license plus their Uber accounts are paused due to a &quot;pupper party&quot; incident. Yes sir. No reason to suspect these two have anything to do with the high profile robbery of several bacon factories in the San Luis Obispo area. Why it's physically impossible for them to have done it.</p>
     </div>
   </div>
-
+  <div class="story">
+    <div class="story-header">
+      <span class="story-date">JUN 19, 2023</span>
+      <h2 class="story-title">The Operation</h2>
+    </div>
+    <figure class="story-photo">
+      <img src="photos/ch3_2023_06_19_014.jpg" alt="The Operation" loading="lazy">
+    </figure>
+    <div class="story-body">
+      <p>Out here in the wilds so no one can spy on the pups while they practice for the upcoming karaoke celebrity impression competition.  Della is planning on Taylor Swift's Anti-hero in a Charlie Chaplin style, so it's mostly going to be silent as she holds up black and white signs with the lyrics while acting it out in a mustache and bowler hat. While Oban is practicing his Reagan impersonation forPapa, Can You Hear Me?</p>
+      <p>By Barbra Streisand. Only replacing 'papa' with 'mama' for comedic effect.</p>
+    </div>
+  </div>
+  <div class="story">
+    <div class="story-header">
+      <span class="story-date">JUL 10, 2023</span>
+      <h2 class="story-title">I say &quot;sit Oban&quot; and Oban sits.</h2>
+    </div>
+    <figure class="story-photo">
+      <img src="photos/ch3_2023_07_10_015.jpg" alt="I say &quot;sit Oban&quot; and Oban sits." loading="lazy">
+    </figure>
+    <div class="story-body">
+      <p>I say &quot;sit Oban&quot; and Oban sits.</p>
+      <p>I say &quot;sit Della&quot; and she sits like a four legged table.</p>
+      <p>I am now in the worst position as a leader. How do I save face and maintain discipline In front of such nonchalant insubordination.</p>
+      <p>I add &quot;when you feel like it.&quot; Phew. I don't think they noticed the pause. Order is maintained for another day.</p>
+    </div>
+  </div>
+  <div class="story">
+    <div class="story-header">
+      <span class="story-date">JUL 12, 2023</span>
+      <h2 class="story-title">I've seen this pup jump through barricaded…</h2>
+    </div>
+    <figure class="story-photo">
+      <img src="photos/ch3_2023_07_12_016.jpg" alt="I've seen this pup jump through barricaded…" loading="lazy">
+    </figure>
+    <div class="story-body">
+      <p>I've seen this pup jump through barricaded windows, over deep ravines, all for a morsel of chicken on the floor. But take her for a hike and a chest high log will stop her dead in her tracks. Wouldn't even put a paw on the log to see if she could climb over. She threw in the towel without hesitation. Oban was unfazed by the log or Della's willingness to give up at the first sign of trouble.</p>
+    </div>
+  </div>
+  <div class="story">
+    <div class="story-header">
+      <span class="story-date">JUL 19, 2023</span>
+      <h2 class="story-title">The Film Debut</h2>
+    </div>
+    <figure class="story-photo">
+      <img src="photos/ch3_2023_07_19_017.jpg" alt="The Film Debut" loading="lazy">
+    </figure>
+    <div class="story-body">
+      <p>Got so distracted picking which Disney movies represent our personalities best I almost forgot the photos.  Obviously Oban is Beauty and the Beast because he's undeniably handsome but becomes a real animal around dropped food and Gaston type dogs. Della says she's Mulan because she's very strong and warrior-like. But  I think she's a Sleeping beauty on account of how much she naps after meals.</p>
+      <p class="reaction">Adam: 💜💜💜💜</p>
+    </div>
+  </div>
+  <div class="story">
+    <div class="story-header">
+      <span class="story-date">JUL 24, 2023</span>
+      <h2 class="story-title">The Dining Affair</h2>
+    </div>
+    <figure class="story-photo">
+      <img src="photos/ch3_2023_07_24_018.jpg" alt="The Dining Affair" loading="lazy">
+    </figure>
+    <div class="story-body">
+      <p>Della likes to sit and think about what it would be like to have dinner and breakfast but whenever she wanted.</p>
+      <p class="reaction">Dad: That's my girl </p>
+    </div>
+  </div>
+  <div class="story">
+    <div class="story-header">
+      <span class="story-date">JUL 26, 2023</span>
+      <h2 class="story-title">This is what it looks like when…</h2>
+    </div>
+    <figure class="story-photo">
+      <img src="photos/ch3_2023_07_26_019.jpg" alt="This is what it looks like when…" loading="lazy">
+    </figure>
+    <div class="story-body">
+      <p>This is what it looks like when you share a story about seeing a kid drop their ice cream cone the other day. Doesn't matter how much you try to add that it was several days ago miles away in another town. All they hear is 'ice cream's and 'floor' maybe in a few hours they'll give up. Maybe.</p>
+      <p class="reaction">Adam: 🧡🧡</p>
+    </div>
+  </div>
+  <div class="story">
+    <div class="story-header">
+      <span class="story-date">AUG 1, 2023</span>
+      <h2 class="story-title">Was running lines with the pups for a local play they're in.</h2>
+    </div>
+    <figure class="story-photo">
+      <img src="photos/ch3_2023_08_01_020.jpg" alt="Was running lines with the pups for a local play they're in." loading="lazy">
+    </figure>
+    <div class="story-body">
+      <p>Was running lines with the pups for a local play they're in. Oban plays William Barkspear a former playwright out in the woods alone with his guilt for past crimes. Della plays Barkspear's stomach who tries to convince him to go eat a sandwich. A great compelling tale of woe, wrath, and whole wheat bread.</p>
+      <p class="reaction">Adam: 😂💛</p>
+    </div>
+  </div>
   <div class="paw-divider">🐾 &nbsp; 🐾 &nbsp; 🐾</div>
 
-  <!-- STORY 12 -->
   <div class="story">
     <div class="story-header">
-      <span class="story-date">DEC 14, 2025</span>
-      <h2 class="story-title">The Breakfast Eating Contest</h2>
+      <span class="story-date">AUG 23, 2023</span>
+      <h2 class="story-title">I knew something was off the moment I got inside.</h2>
     </div>
+    <figure class="story-photo">
+      <img src="photos/ch3_2023_08_23_021.jpg" alt="I knew something was off the moment I got inside." loading="lazy">
+    </figure>
     <div class="story-body">
-      <p>Nothing to really report. Della and Oban got challenged to a breakfast eating contest where everything from scrambled eggs (1 point) to mimosas (3 points) was offered. They got challenged by the neighborhood bully — a Pitbull and Poodle named Princess (Pitbull) and Eviscerator (Poodle).</p>
-      <p>Only Della showed up because Oban was busy burgling their house. So don't be surprised if Della comes home with a big trophy and Oban comes home with a trash bag full of expensive silverware and several original paintings by long-dead Italian painters.</p>
+      <p>I knew something was off the moment I got inside. Oban looked nervous all day too, like he was embarrassed or trying to keep a secret. Well it's not until dinner time that I realize what's wrong.</p>
+      <p>I haven't seen Della all day.</p>
+      <p>I looked everywhere inside and out, roof to wine cellar. Nothing. Then I questioned if I had missed a note or forgotten a conversation explaining that Della had gone with someone and it was just Oban and me for the weekend. And with so much time having gone by I was terrified to admit losing Della now.</p>
+      <p>It must have been 4 in the morning when I hear a loud limousine turn around in the drive way with rather loud passengers slurring out something about girls rule. I get up and find Della at the door smelling like the fruitiest cocktail bar.  Near as I can piece things together from Oban is she got invited to three bachelorette parties on the same day. She couldn't even make it inside so she passed out on the front porch.  She is a party animal.</p>
+      <p class="reaction">Adam: 😍😍😍</p>
+      <p class="reaction">Dad: Love it</p>
     </div>
   </div>
-
-  <!-- STORY 13 -->
   <div class="story">
     <div class="story-header">
-      <span class="story-date">DEC 16, 2025</span>
-      <h2 class="story-title">The West Wing</h2>
+      <span class="story-date">SEP 2, 2023</span>
+      <h2 class="story-title">The Squirrel</h2>
     </div>
+    <figure class="story-photo">
+      <img src="photos/ch3_2023_09_02_022.jpg" alt="The Squirrel" loading="lazy">
+    </figure>
     <div class="story-body">
-      <p>Pups found some old home-recording <em>West Wing</em> tapes and a functioning VCR. So they got really into it and have been quoting rousing speeches from Martin Sheen and Rob Lowe all day. Only downside is they don't know what a commercial is, so intermittently one of them will start quoting a commercial thinking it's part of the show.</p>
-      <p>So Oban will give a rousing speech about how every vote matters and Della will follow it up reminding us that Domino's used to sell a large pepperoni and a medium 2-topping pizza with bread sticks and a 2-liter of Pepsi for just $8.99 on Mondays.</p>
-      <p>Or Della will opine about the Bible being less important than the constitution except on election years, and Oban will remind me that Miss Cleo can determine my future for $1.99 a minute.</p>
-    </div>
-    <div class="reaction">Kelsey: "Where did you see a horse?"<br>Byron: "Della sees them every Wednesday at the race track."</div>
-  </div>
-
-  <!-- STORY 14 -->
-  <div class="story">
-    <div class="story-header">
-      <span class="story-date">DEC 20, 2025</span>
-      <h2 class="story-title">Bigfoot Owes Della Money</h2>
-    </div>
-    <div class="story-body">
-      <p>Della and I are heading up to the mountains for the weekend.</p>
-      <p>Bigfoot lives in those woods.</p>
-      <p>Bigfoot owes Della money.</p>
-      <p>And Della knows a debt unpaid is like a fridge unstocked with delicious orange baby carrots. Unthinkable.</p>
-      <p>Della will get what's owed to her.</p>
+      <p>Oban saw a squirrel and Della thought she saw a terducken, so they both pulled with enough force to dislocate my shoulder. Thankfully Della is a licensed chiropractor and popped that shoulder back into place. Was even kind enough to take about five years of stress off my lower back. She's got real healing paws.</p>
+      <p class="reaction">Thomas: 😂💜</p>
     </div>
   </div>
-
-  <!-- STORY 15 -->
   <div class="story">
     <div class="story-header">
-      <span class="story-date">DEC 23, 2025</span>
-      <h2 class="story-title">Last Minute Christmas Shopping</h2>
+      <span class="story-date">SEP 5, 2023</span>
+      <h2 class="story-title">They can't even look at me.</h2>
     </div>
+    <figure class="story-photo">
+      <img src="photos/ch3_2023_09_05_023.jpg" alt="They can't even look at me." loading="lazy">
+    </figure>
     <div class="story-body">
-      <p>Della and Oban had me rushing everywhere today. Last minute gift buying. Had to go to Safeway to get ten pounds of shrimp for cousin Kevin. Had to go to the House of Prime Rib and buy ten steaks because that's the only thing Uncle Dave wanted, and Della assures me Uncle Dave is worth it. And naturally 23 rotisserie chickens for the stocking stuffers. I'm unfamiliar with that tradition but Oban assured me it is normal and common in western Marin.</p>
-      <p>The pups say they got a great hiding place so I trust it will be a big surprise Christmas morning.</p>
-      <p>Merry Christmas!</p>
+      <p>They can't even look at me. That's how ashamed they are. Hard to believe the same pups rushed up to look me straight in the eye with promises of fame and riches. They just needed 200k for the &quot;investment of several lifetimes&quot; Oban said. Now 200k later, with nothing but a garage packed PACKED to the ceiling with nothing but boxes of 32 CD sets of &quot;soothing ocean sounds as performed by Della &amp; Oban&quot;  they said it was an untapped market. They promised that landlocked folk were an easy mark. No flaws in our business plan they said. Now I'm ruined and all I have left is about 300 hours of Della cawing like a seagull while Oban makes the least convincing woosh noise I've ever heard.</p>
     </div>
-    <div class="reaction">Kelsey: "10/10"<br>Byron: "Don't spoil it but Oban got a whole 10-gallon hat of BBQ wings just for you. He told me not to spoil the surprise."<br>Kaitlin: "Love it! Merry Christmas!"</div>
   </div>
-
-  <!-- STORY 16 -->
   <div class="story">
     <div class="story-header">
-      <span class="story-date">DEC 30, 2025</span>
-      <h2 class="story-title">The Carrot Body Check</h2>
+      <span class="story-date">SEP 10, 2023</span>
+      <h2 class="story-title">Was so busy yesterday I forgot to give a pupdate.</h2>
+    </div>
+    <figure class="story-photo">
+      <img src="photos/ch3_2023_09_10_024.jpg" alt="Was so busy yesterday I forgot to give a pupdate." loading="lazy">
+    </figure>
+    <div class="story-body">
+      <p>Was so busy yesterday I forgot to give a pupdate. And what a time it was. Oban's keen observation skills noticed a sign advertising a local play, which turned the conversation into whether or not I was giving them a healthy education as well as a healthy exercise. I was eventually persuaded to let them see the show.</p>
+      <p>It wasn't until the play ended and the cast came out to mingle in a casual open after party that trouble started, Oban  and I enjoyed the show well enough. But Della seemed to have some extensive notes and critiques of just about everything. (Later Oban told me that Della had been binge watching 'Inside the Actor's Studio')  well she got into a barking match with the director over the use of the word country vs. kingdom. The police were called but Oban had already pulled the car around to the back window so Della and I could make a quick escape. Don't know if we're all banned or just Della but it really was a fine show.</p>
+      <p class="reaction">Mom: You are too clever!</p>
+    </div>
+  </div>
+  <div class="story">
+    <div class="story-header">
+      <span class="story-date">SEP 16, 2023</span>
+      <h2 class="story-title">Walk Report #25</h2>
+    </div>
+    <figure class="story-photo">
+      <img src="photos/ch3_2023_09_16_025.jpg" alt="Walk Report #25" loading="lazy">
+    </figure>
+    <div class="story-body">
+      <p>A good day. The sky is covered in clouds. Oban gets to lighten his coat a bit with the gray. Della gets to feed her ego by being the brightest light on the mountain.</p>
+    </div>
+  </div>
+  <div class="story">
+    <div class="story-header">
+      <span class="story-date">SEP 30, 2023</span>
+      <h2 class="story-title">Demonic Oban and Overlord Della.</h2>
+    </div>
+    <figure class="story-photo">
+      <img src="photos/ch3_2023_09_30_026.jpg" alt="Demonic Oban and Overlord Della." loading="lazy">
+    </figure>
+    <div class="story-body">
+      <p>Demonic Oban and Overlord Della. The two meanest toughest enforcers in the criminal underground.  Finally found Dear &quot;Aunty&quot; Ler. Looks like Ler didn't forget that he owes Don Lopin 37 eaten azaleas and daffodils. Plus interest.</p>
+    </div>
+  </div>
+  <div class="story">
+    <div class="story-header">
+      <span class="story-date">OCT 14, 2023</span>
+      <h2 class="story-title">The Haunting</h2>
+    </div>
+    <figure class="story-photo">
+      <img src="photos/ch3_2023_10_14_027.jpg" alt="The Haunting" loading="lazy">
+    </figure>
+    <div class="story-body">
+      <p>Come on Dell, I know you being the 7th pup of the 7th litter of the 7th generation makes you the storm witch of this century and that comes with a lot of responsibility. But could you make it a little less gloomy out?  And don't try that &quot;my spells only work with bacon as a medium&quot; again. I've consulted the time and it doesn't even mention bacon as a conduit of power.</p>
+      <p class="reaction">Adam: 🤣🤣</p>
+      <p class="reaction">Mom: Great!!!</p>
+    </div>
+  </div>
+  <div class="story">
+    <div class="story-header">
+      <span class="story-date">OCT 17, 2023</span>
+      <h2 class="story-title">The Beach Day</h2>
+    </div>
+    <figure class="story-photo">
+      <img src="photos/ch3_2023_10_17_028.jpg" alt="The Beach Day" loading="lazy">
+    </figure>
+    <div class="story-body">
+      <p>Alas the sturdy ground is no place for a couple of salty sea dogs like these. Tis the call of the ocean rings in their hearts better than any dog whistle could in their ears. A hike is all well and good. But it hardly compares to a good paddle out in the open waters.  And sure these rogues enjoy ambushing and mugging cardio enthusiasts but the treasure is hardly more than a few water bottles and a Starbucks gift card. These saline scoundrels need real plunder from a proper piracy on the high seas.</p>
+    </div>
+  </div>
+  <div class="story">
+    <div class="story-header">
+      <span class="story-date">OCT 28, 2023</span>
+      <h2 class="story-title">The Squirrel</h2>
+    </div>
+    <figure class="story-photo">
+      <img src="photos/ch3_2023_10_28_029.jpg" alt="The Squirrel" loading="lazy">
+    </figure>
+    <div class="story-body">
+      <p>Adventure isn't a destination it's a journey one takes with themselves. On the open road with no rules, no jobs, no guidance, no maps.</p>
+      <p>That was Della's way of telling me we are lost and she doesn't want Oban to be mad that he's gonna miss tonight's ep of Squirrely Dan's Squirrely podcast.</p>
+      <p class="reaction">Adam: 😝🥰</p>
+    </div>
+  </div>
+  <div class="story">
+    <div class="story-header">
+      <span class="story-date">OCT 31, 2023</span>
+      <h2 class="story-title">Splendid job this year on the costumes.</h2>
+    </div>
+    <figure class="story-photo">
+      <img src="photos/ch3_2023_10_31_030.jpg" alt="Splendid job this year on the costumes." loading="lazy">
+    </figure>
+    <div class="story-body">
+      <p>Splendid job this year on the costumes. Della looks exactly like Oban. And Oban is the perfect image of Della. I wouldn't have even noticed if they hadn't forgotten to swap the leashes as well. And if because even more obvious once Oban started talking about chilled chicken and Della started going wild at what looked like a squirrel at first. Later it turned out to be a tree branch with a very crude shape of a squirrel.</p>
+      <p class="reaction">Adam: 🤣🤣🙏🙏</p>
+    </div>
+  </div>
+  <div class="paw-divider">🐾 &nbsp; 🐾 &nbsp; 🐾</div>
+
+  <div class="story">
+    <div class="story-header">
+      <span class="story-date">NOV 7, 2023</span>
+      <h2 class="story-title">These back roads aren't to be taken lightly.</h2>
+    </div>
+    <figure class="story-photo">
+      <img src="photos/ch3_2023_11_07_031.jpg" alt="These back roads aren't to be taken lightly." loading="lazy">
+    </figure>
+    <div class="story-body">
+      <p>These back roads aren't to be taken lightly. Why just yesterday someone reported a missing sandwich. Must have fallen out of an unzipped backpack on one of these winding cliff-like trails. Thankfully good folk like Oban and Della are here volunteering their free time to search for that lost scared and possibly even injured sandwich. We can only hope they find that sandwich before the wildlife does.</p>
+      <p class="reaction">Mom: You are so talented!</p>
+      <p class="reaction">Adam: 👏👏</p>
+    </div>
+  </div>
+  <div class="story">
+    <div class="story-header">
+      <span class="story-date">NOV 14, 2023</span>
+      <h2 class="story-title">Biggest evidence these are secretly sky dogs…</h2>
+    </div>
+    <figure class="story-photo">
+      <img src="photos/ch3_2023_11_14_032.jpg" alt="Biggest evidence these are secretly sky dogs…" loading="lazy">
+    </figure>
+    <div class="story-body">
+      <p>Biggest evidence these are secretly sky dogs is how obsessed they are with the concept of ground and dirt and rocks. Blue sky, white clouds, mild rain, even lightning isn't even worth tilting an ear at. But this pile of dirt that's next to some dead grass. Fascinating! Exquisite! Stupendously captivating.</p>
+      <p class="reaction">Adam: 🤪🤪</p>
+    </div>
+  </div>
+  <div class="story">
+    <div class="story-header">
+      <span class="story-date">NOV 19, 2023</span>
+      <h2 class="story-title">New Year's</h2>
     </div>
     <div class="story-body">
-      <p>If you ask a man his salary he's likely to mumble something about it not being as important as his work ethic, or deflect to the economy and what the real value of a dollar is.</p>
-      <p>Likewise if you ask a woman her age you can expect accusations of being a creep, or being told how rude you are.</p>
-      <p>Now ask an Oban to "find the tennis ball" where none exist and you'll be taking your car off-road just to track him down.</p>
-      <p>But if you ask a Della if she wants a carrot — you will never see it, but you will feel her body check you in the knees to knock you down so she can look you in the eyes and ask: "where are they?"</p>
-      <p>So anyways, that's how my arm ended up in a cast. And why you should never dangle a carrot in front of a starving Della.</p>
+      <p>Told them it was a rare Chinese new year and because of that thanksgiving dinner can't happen until after Christmas. So, as you'd expect from the pups. They are out here judging the merits of every tree and some shrubs even.</p>
+      <p>&quot;Too much Douglass not enough fur.&quot;</p>
+      <p>&quot; Too much fur, not enough Douglass.&quot;</p>
+      <p>&quot;The bush isn't big enough yet.&quot;</p>
+      <p>&quot;Definitely a rock.&quot;</p>
+      <p>They promise to deliver the best tree in years.</p>
+      <p class="reaction">Thomas: 😂👍🏽</p>
+    </div>
+  </div>
+  <div class="story">
+    <div class="story-header">
+      <span class="story-date">DEC 3, 2023</span>
+      <h2 class="story-title">The Holiday Special</h2>
+    </div>
+    <figure class="story-photo">
+      <img src="photos/ch3_2023_12_03_034.jpg" alt="The Holiday Special" loading="lazy">
+    </figure>
+    <div class="story-body">
+      <p>Ever the trail blazers these pups have abandoned holiday shopping in boring conventional stores and are now in the wild scavenging gifts. While it's the thought that counts some of you may wonder what thoughts went through their head as you receive your gifts. Not to give anything away but Della was certain she heard someone talk about how they don't have a pinecone made of rocks and mud. While Oban put a lot of effort into getting someone a complete collection of different sized twigs loosely bundled into a pile. I know I want one.</p>
+    </div>
+  </div>
+  <div class="story">
+    <div class="story-header">
+      <span class="story-date">DEC 12, 2023</span>
+      <h2 class="story-title">Oban senses it.</h2>
+    </div>
+    <figure class="story-photo">
+      <img src="photos/ch3_2023_12_12_035.jpg" alt="Oban senses it." loading="lazy">
+    </figure>
+    <div class="story-body">
+      <p>Oban senses it. Something out in the mist. Something not meant for this world. Something  with only nefarious intent, a malicious mind. Thankfully Oban is here to watch out and protect us. On the flip side Della might have been the one to call it here, in the hopes of selling me out for a scrap of chicken, a dollop of mashed potatoes, or even a sliver of skirt steak.  These pups are indeed a dichotomy of morals.</p>
+      <p class="reaction">Mom: Love it!</p>
+    </div>
+  </div>
+  <div class="story">
+    <div class="story-header">
+      <span class="story-date">DEC 16, 2023</span>
+      <h2 class="story-title">The Dining Affair</h2>
+    </div>
+    <figure class="story-photo">
+      <img src="photos/ch3_2023_12_16_036.jpg" alt="The Dining Affair" loading="lazy">
+    </figure>
+    <div class="story-body">
+      <p>Once again Della would like to extend her deepest sympathies to the hard working staff at every Indian buffet restaurant on 4th St in San Rafael. Though the saying goes, &quot;you can take the dog out of the fight, but you can't take the fight out of the dog&quot; the same is not true when applied to Indian buffets. As you can neither take the Della out of the buffet, nor can you take the buffet out of Della. Perhaps this is a good time to bring up Oban's 'Della proof doors' business. If only he had started this business sooner all this tragedy could have been prevented. If only.</p>
+      <p class="reaction">Mom: lol</p>
+    </div>
+  </div>
+  <div class="story">
+    <div class="story-header">
+      <span class="story-date">DEC 19, 2023</span>
+      <h2 class="story-title">Hundreds of photos.</h2>
+    </div>
+    <div class="story-body">
+      <p>Hundreds of photos. Dad curses, and the promise of meat when I house sit</p>
+      <p class="reaction">Thomas: Ahhhhh makes sense </p>
+    </div>
+  </div>
+  <div class="story">
+    <div class="story-header">
+      <span class="story-date">DEC 23, 2023</span>
+      <h2 class="story-title">It's very hard to get them to…</h2>
+    </div>
+    <figure class="story-photo">
+      <img src="photos/ch3_2023_12_23_038.jpg" alt="It's very hard to get them to…" loading="lazy">
+    </figure>
+    <div class="story-body">
+      <p>It's very hard to get them to look at the camera, like they're hiding something or because they forgot to get me someone. That might be it. They kept suggesting we do our walk at the mall today. Perhaps they are just super excited about a gift and don't want to spoil it. Yeah that's probably it.</p>
+    </div>
+  </div>
+  <div class="story">
+    <div class="story-header">
+      <span class="story-date">DEC 27, 2023</span>
+      <h2 class="story-title">Four leaf clover.</h2>
+    </div>
+    <figure class="story-photo">
+      <img src="photos/ch3_2023_12_27_039.jpg" alt="Four leaf clover." loading="lazy">
+    </figure>
+    <div class="story-body">
+      <p>Four leaf clover. Gotta find that  🍀 before the New Year otherwise Della's wish of turning Oban into a human for a day so he can max out several credit cards using a fake persona and get Della a million gifts that can't be traced back to her won't come true.</p>
+      <p>She says it's an altruistic wish because she's adding to the economy and creating an interesting story to keep the feds entertained.</p>
+      <p class="reaction">Mom: Hahaha </p>
+      <p class="reaction">Adam: 🤣🤣</p>
     </div>
   </div>
 
 </div>
 
 <div class="nav-footer">
-  <a href="chapter2.html" class="nav-link">← Chapter Two</a>
-  <span class="nav-center">Chapter Three of Four</span>
-  <a href="chapter4.html" class="nav-link">Chapter Four →</a>
+  <a href="chapter2.html" class="nav-link">← Chapter 2</a>
+  <span class="nav-center">Chapter Three · 39 stories · 34 photos</span>
+  <a href="chapter4.html" class="nav-link">Chapter 4 →</a>
 </div>
 
 </body>

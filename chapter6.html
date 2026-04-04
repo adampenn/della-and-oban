@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 2 – The Tales of Della & Oban</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background-color: #FDF8EF;
+    font-family: 'Lato', Georgia, serif;
+    color: #2e1a0e;
+  }
+
+  .page-header {
+    background: linear-gradient(160deg, #1a3520 0%, #2e6040 60%, #1a3520 100%);
+    padding: 50px 30px 40px;
+    text-align: center;
+    border-bottom: 4px solid #7ac89a;
+  }
+
+  .back-link {
+    display: inline-block;
+    color: #7ac89a;
+    text-decoration: none;
+    font-size: 0.85em;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    opacity: 0.8;
+  }
+  .back-link:hover { opacity: 1; }
+
+  .chapter-label {
+    color: #7ac89a;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    margin-bottom: 12px;
+  }
+
+  .chapter-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    color: #f0f8f0;
+    font-size: 2.4em;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 10px;
+  }
+
+  .chapter-dates {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-style: italic;
+    color: #7ac89a;
+    font-size: 1em;
+    margin-bottom: 16px;
+  }
+
+  .chapter-intro {
+    color: #c4d8c4;
+    max-width: 560px;
+    margin: 0 auto;
+    font-size: 0.92em;
+    line-height: 1.7;
+  }
+
+  .content {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 50px 30px 80px;
+  }
+
+  .story {
+    margin-bottom: 52px;
+    padding-bottom: 48px;
+    border-bottom: 1px solid #e0d0b8;
+    position: relative;
+  }
+
+  .story:last-child { border-bottom: none; }
+
+  .story-header {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    margin-bottom: 14px;
+    flex-wrap: wrap;
+  }
+
+  .story-date {
+    background: #2e6040;
+    color: #f0f8f0;
+    font-size: 0.72em;
+    letter-spacing: 1.5px;
+    padding: 4px 12px;
+    border-radius: 20px;
+    white-space: nowrap;
+  }
+
+  .story-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.4em;
+    color: #1a3520;
+    font-weight: 700;
+  }
+
+  .story-body {
+    font-size: 1.02em;
+    line-height: 1.85;
+    color: #2e1a0e;
+  }
+
+  .story-body p { margin-bottom: 12px; }
+
+  .reaction {
+    font-size: 0.85em;
+    color: #8a6a50;
+    font-style: italic;
+    margin-top: 12px;
+    padding-left: 16px;
+    border-left: 2px solid #7ac89a;
+  }
+
+  .paw-divider {
+    text-align: center;
+    color: #2e6040;
+    font-size: 16px;
+    margin: 40px 0 36px;
+    letter-spacing: 12px;
+    opacity: 0.5;
+  }
+
+  .nav-footer {
+    background: #1a3520;
+    padding: 30px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav-link {
+    color: #7ac89a;
+    text-decoration: none;
+    font-size: 0.9em;
+    letter-spacing: 1px;
+    padding: 10px 20px;
+    border: 1px solid rgba(122,200,154,0.4);
+    border-radius: 4px;
+    transition: all 0.2s;
+  }
+  .nav-link:hover {
+    background: rgba(122,200,154,0.15);
+    border-color: #7ac89a;
+  }
+
+  .nav-center {
+    color: #f0f8f0;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 0.95em;
+  }
+
+  .pullquote {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-style: italic;
+    font-size: 1.1em;
+    color: #2e6040;
+    border-left: 3px solid #7ac89a;
+    padding: 10px 20px;
+    margin: 16px 0;
+    background: rgba(122,200,154,0.07);
+    border-radius: 0 4px 4px 0;
+  }
+
+  .story-photo {
+    margin: 20px 0 8px;
+    text-align: center;
+  }
+  .story-photo img {
+    max-width: 100%;
+    width: 380px;
+    border-radius: 6px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.18);
+    display: inline-block;
+  }
+  .story-photo figcaption {
+    font-style: italic;
+    font-size: 0.82em;
+    color: #8a6a50;
+    margin-top: 7px;
+    letter-spacing: 0.3px;
+  }
+</style>
+</head>
+<body>
+
+<div class="page-header">
+  <a href="index.html" class="back-link">← Back to Table of Contents</a>
+  <div class="chapter-label">Chapter Six</div>
+  <h1 class="chapter-title">Summer Schemes<br>&amp; Fall Capers</h1>
+  <p class="chapter-dates">July – October 2025</p>
+  <p class="chapter-intro">The dogs venture into heists, political campaigns, tiki bars, and one very suspicious flight to Quebec. Oban hunts squirrels. Della runs for office and denies everything.</p>
+</div>
+
+<div class="content">
+
+  <!-- STORY 1 -->
+  <div class="story">
+    <div class="story-header">
+      <span class="story-date">JUL 5, 2025</span>
+      <h2 class="story-title">The Milkshake Factory</h2>
+    </div>
+    <div class="story-body">
+      <p>Hour 7 of Della's "the milkshake factory is just around the corner." We ran out of water and I lost one of my shoes to a pack of squirrels riding RC cars in Mad Max costumes. I understand now why Oban is so aggressive towards them.</p>
+      <p>Della insists we would have been there by now if I hadn't been a baby about walking through the blackberry, rose, and poison oak hedges. But I feel like that's a lie, as we've now seen those hedges from 3 different angles.</p>
+      <p>I'm hopeful my GPS will reconnect soon so I can at least get an ETA on Della's route.</p>
+    </div>
+    <div class="reaction">Kelsey: 😂😂</div>
+  </div>
+
+  <!-- STORY 2 -->
+  <div class="story">
+    <div class="story-header">
+      <span class="story-date">JUL 8, 2025</span>
+      <h2 class="story-title">Oban's 4th of July Address</h2>
+    </div>
+    <div class="story-body">
+      <p>Had no idea Oban was asked to bark at this year's 4th of July fair. I was lucky enough to find his speech scribbled on some napkin in his wallet. For those that missed it, here's his speech, unedited:</p>
+      <div class="pullquote">BARK BARK BARK. woof! BARK bark wtf bark? Woof woof woof. Woof. Woof. Grrrrrr. BARK woof woof bark! Arooowwwww.</div>
+      <p>It's so rare to hear something so historical that still breaks new ground. Oban is so talented.</p>
+    </div>
+    <div class="reaction">Kelsey: "Oban!! 🐾"</div>
+  </div>
+
+  <!-- STORY 3 -->
+  <div class="story">
+    <div class="story-header">
+      <span class="story-date">JUL 12, 2025</span>
+      <h2 class="story-title">The Square Tree</h2>
+    </div>
+    <div class="story-body">
+      <p>Yep. This isn't a normal tree. It's too square. It's happened before, but it isn't natural. Oban and Della have conflicting theories. Della insists aliens are experimenting on or testing something. Oban doesn't have anything yet but he's currently researching the occult. Possibly an angered tree spirit. Or some local coven he has yet to initiate into. They don't think it's malicious intent... for now.</p>
+    </div>
+  </div>
+
+  <!-- STORY 4 -->
+  <div class="story">
+    <div class="story-header">
+      <span class="story-date">JUL 15, 2025</span>
+      <h2 class="story-title">The Planning Session</h2>
+    </div>
+    <figure class="story-photo">
+      <img src="photos/both_conspiring.jpg" alt=""Act natural and sniff around. Good dog. Think good dog thoughts."" loading="lazy">
+      <figcaption>"Act natural and sniff around. Good dog. Think good dog thoughts."</figcaption>
+    </figure>
+    <div class="story-body">
+      <p><em>*low hurried whispers*</em></p>
+      <p>D: I'll take the gems to the Irish in good faith to secure the equipment. Meanwhile you get over to your uncle's auto shop and make sure the Dodge RAM is going to be ready in time. Then go down to the docks and get an updated ETA from our contact. If he asks for more, tell him he's already been paid fairly — if he wants more then he's got to give more, or you'll find another dock worker to help a 'boat enthusiast' get a closer look at some really nice boats.</p>
+      <p>O: What about the men from NASA?</p>
+      <p>D: What about the men from NASA? They spend their time and resources looking at the sky — it's why this is going to be such an easy job.</p>
+      <p>O: And the walker?</p>
+      <p>D: He's too dumb to take a bribe and too honest to not keep around as an alibi.</p>
+      <p>O: Psst — hey, speak of the honest idiot. Here he comes.</p>
+      <p>D: Shoot — cover it up, cover it up! Alright, act natural and sniff around. Good dog, think good dog thoughts.</p>
+    </div>
+  </div>
+
+  <!-- STORY 5 -->
+  <div class="story">
+    <div class="story-header">
+      <span class="story-date">JUL 26, 2025</span>
+      <h2 class="story-title">Della's Appeal Case</h2>
+    </div>
+    <div class="story-body">
+      <p>Not a good day for Della. She lost her appeals case and is going to spend another three hours locked outside. But that's what happens when you illegally nap on the floor to obstruct traffic to the kitchen in protest.</p>
+      <p>Though she does have a silver lining — Oban also fought the paw and the paw won when he violated the squirrel's restraining order, and now has to give over 10% of his carrots for the next month to Della as a first-offender fine. So let that be a lesson: stay in dog behavior school and say no to catnip.</p>
+    </div>
+  </div>
+
+  <!-- STORY 6 -->
+  <div class="story">
+    <div class="story-header">
+      <span class="story-date">JUL 29, 2025</span>
+      <h2 class="story-title">Conan Rehearsal</h2>
+    </div>
+    <div class="story-body">
+      <p>Della showed us the faces she was planning to make as part of the talent section during her next Conan appearance. Oban couldn't find the words.</p>
+    </div>
+  </div>
+
+  <div class="paw-divider">🐾 &nbsp; 🐾 &nbsp; 🐾</div>
+
+  <!-- STORY 7 -->
+  <div class="story">
+    <div class="story-header">
+      <span class="story-date">AUG 2, 2025</span>
+      <h2 class="story-title">Della the Food Waste Activist</h2>
+    </div>
+    <div class="story-body">
+      <p>Did you know that the average home throws out almost 200lbs of food into the trash each year? Della — she's such a good girl. Every Saturday Della insists that instead of going for her Saturday walks, she has me drive her around to different neighborhoods so that she can sort through their trash to properly dispose of all food waste. Why, in the past hour we've found enough tossed lasagna scraps and pizza crust to make a family-sized lasagna with "special" bread sticks.</p>
+      <p>Naturally, Della promises that she's going to use it to start a compost at a local kindergarten to help kids learn about gardening.</p>
+      <p>And while maybe not as important, Oban wants you to know that the average family of 7 throws out 0.00001% of a tennis ball every 3-6 years. It gets even worse when you find out tennis players often go to the tennis court with a basket of tennis balls because they just have no idea how to properly recycle them. They're the most embarrassed because they always try to tell Oban not to take their used tennis balls, and Oban has to growl sometimes and remind them that it's okay to be so grateful that you don't want him to take their old tennis balls — but not to worry. He will take care of them the proper way.</p>
+    </div>
+  </div>
+
+  <!-- STORY 8 -->
+  <div class="story">
+    <div class="story-header">
+      <span class="story-date">AUG 6, 2025</span>
+      <h2 class="story-title">Baby Toys</h2>
+    </div>
+    <div class="story-body">
+      <p>While it's nice to have toys for the baby, I think we should keep in mind how impressionable the pups are as well. Just yesterday I had to talk Oban out of driving a dump truck on a golf course because he believed that he had practiced enough at home with the tonka truck and plastic golf set.</p>
+      <p>Della I had to go pick up from the court house because the Mattel "My First Court Case" made her think she had passed the bar and was giving really unsound legal counsel to people in the jail house. She did help get one guy out of a speeding ticket. But unfortunately then got him convicted of running an illegal flower shop. Hope the guy doesn't hold a grudge when he gets out in five years.</p>
+    </div>
+  </div>
+
+  <!-- STORY 9 -->
+  <div class="story">
+    <div class="story-header">
+      <span class="story-date">AUG 9, 2025</span>
+      <h2 class="story-title">The Plate Pusher</h2>
+    </div>
+    <div class="story-body">
+      <p>It was a good hour and a half before she let me take her plate away. And this is her second lap pushing the bowl around the yard with her nose. The only thing she didn't scarf down was some table etiquette.</p>
+    </div>
+  </div>
+
+  <!-- STORY 10 -->
+  <div class="story">
+    <div class="story-header">
+      <span class="story-date">AUG 19, 2025</span>
+      <h2 class="story-title">Della Casts a Spell</h2>
+    </div>
+    <div class="story-body">
+      <p>Was having a drink at the Lava Pit — a hip new tiki bar that a family of raccoons dug out from under a neighbor's porch — when Della turns to me after her 4th sour tennis ball (lemon drop but it's made green using Midori sour) and barks:</p>
+      <div class="pullquote">"You know what, you're alright. You're a nice guy who helps people and is easy on the paws. I'm gonna do you a favor and use my wiccan magic to summon you a pretty human lady to be your girlfriend."</div>
+      <p>I try to tell her that's probably not a great idea, and voice concern for her using up so much magic when the next full moon is weeks away. But she ignored me and started to cast right there at the bar. It lasted only a minute, but the melody of the spell was so harmonious that none interrupted her. Not to mention the dazzling magical light energies that paraded around her in all kinds of runes and shapes and colors. As though Della was finishing an order to a waiter, it just ended.</p>
+      <p>And sure enough, that's when the prettiest lady I've ever seen crawled in through the entrance. It was animal control, and Della had clearly alarmed the upstairs neighbors. We got out a side exit before more AC thugs started to crawl in.</p>
+      <p>Two lessons learned today: Careful what you wish for. And do not let Della drink and cast — she will make things worse.</p>
+    </div>
+    <div class="reaction">Kelsey: "This is a 10/10! 🔥"<br>Kaitlin: "Della is magical! 🐾"<br>Byron: "Draw it for the book."</div>
+  </div>
+
+  <!-- STORY 11 -->
+  <div class="story">
+    <div class="story-header">
+      <span class="story-date">AUG 23, 2025</span>
+      <h2 class="story-title">The Abandoned Pools</h2>
+    </div>
+    <div class="story-body">
+      <p>Hot day, hot day indeed. Which is why Oban showed us this chic new bar &amp; grill named 'Abandoned Pools.' It's hidden in an old decrepit mansion — the piano room hides a 50ft shaft you have to climb down. Then it's a dark hallway in which you have to face your inner fear. I got a spider. Oban just had to stare into a mirror. And Della had to stare at an almost empty fridge except for one letter written in French and signed with lipstick.</p>
+      <p>The place is a bunch of underground pools converted into lounges and bars. I really am lucky Oban and Della have these connections, because the car AC was not going to cut it in this heat.</p>
+    </div>
+    <div class="reaction">Kelsey: Hahaha!</div>
+  </div>
+
+  <!-- STORY 12 -->
+  <div class="story">
+    <div class="story-header">
+      <span class="story-date">AUG 26, 2025</span>
+      <h2 class="story-title">Della's Campaign Announcement</h2>
+    </div>
+    <figure class="story-photo">
+      <img src="photos/della_striding.jpg" alt="Candidate Della, en route to the polls." loading="lazy">
+      <figcaption>Candidate Della, en route to the polls.</figcaption>
+    </figure>
+    <div class="story-body">
+      <p>We're coming up on election season again. And you all know what that means. Della is running for office. Any office — she craves power like the flower craves the sun. It also means she has to once again get out ahead of all the future allegations. So for starters, Della would like to officially address the following:</p>
+      <p>— Della has never seen your child before and therefore could not have stolen candy from them. Della has never seen any child before in her entire life and all evidence to the contrary is obviously AI generated.</p>
+      <p>— Della has only ever engaged in peaceful non-violent protest. Any supposed blood on her paws is obviously strawberry preserves from her jarring and pickling hobby.</p>
+      <p>— Aside from jarring and pickling, Della has no hobbies. Della especially has never nor would ever have a hobby where she, Rutger Hauler, John C. McGinley, F. Murray Abraham, and William McNamara would lure Mr. Ice-T onto a mountainous reservation and attempt to hunt Mr. Ice-T for sport.</p>
+      <p>— Della has never PERSONALLY embezzled from any of her charities.</p>
+      <p>That should cover the opening weeks come campaign day.</p>
+    </div>
+  </div>
+
+  <!-- STORY 13 -->
+  <div class="story">
+    <div class="story-header">
+      <span class="story-date">AUG 30, 2025</span>
+      <h2 class="story-title">The Borrowers</h2>
+    </div>
+    <div class="story-body">
+      <p>Those "Borrowers" are now living on borrowed time ever since Della did inventory of the baby carrots and found two missing. I'm not sure capital punishment will be enough to satisfy Della's sense of justice once she finds the little borrowers.</p>
+      <p>But worry not — Della is as noble as she is forgetful. It's only a matter of time before she remembers it was her who ate those baby carrots. And then justice will be served.</p>
+    </div>
+  </div>
+
+  <div class="paw-divider">🐾 &nbsp; 🐾 &nbsp; 🐾</div>
+
+  <!-- STORY 14 -->
+  <div class="story">
+    <div class="story-header">
+      <span class="story-date">SEP 2, 2025</span>
+      <h2 class="story-title">A Perfectly Normal Day</h2>
+    </div>
+    <div class="story-body">
+      <p>Nothing special. Oban had to go to the vet today — he wasn't sick or anything, just one of the doctors owes him money. Then we went to the bank. No, Della doesn't have an account, but she is extorting one of the bank tellers. Then just a casual drop-off — at least Oban says it's a drop-off, because he accidentally got some of their mail, I guess. Then it's off to the horse track — Della promises she doesn't gamble but simply wants to test her precognitive psychic training. And she needs to buy a ticket to make sure she keeps track of her predictions.</p>
+      <p>Just a normal casual day for the dogs.</p>
+    </div>
+  </div>
+
+  <!-- STORY 15 -->
+  <div class="story">
+    <div class="story-header">
+      <span class="story-date">SEP 6, 2025</span>
+      <h2 class="story-title">The Septupleathlon</h2>
+    </div>
+    <div class="story-body">
+      <p>Hard to get face pics when the pups are face-forward training with all their might for the upcoming septupleathlon. They aren't actually participating — but they are registered and plan to sneak into the exit looking exhausted, so they can pig out on all the feed and drinks provided to the racers at the end.</p>
+    </div>
+  </div>
+
+  <!-- STORY 16 -->
+  <div class="story">
+    <div class="story-header">
+      <span class="story-date">SEP 10, 2025</span>
+      <h2 class="story-title">Della's Uber Eats Startup</h2>
+    </div>
+    <div class="story-body">
+      <p>Despite the cool weather I'm sweating like a pig at a BBQ. Della's kept me working 27 straight hours on her newest startup. It's a "tax and fee free Uber Eats" — except the taxes and fees are all bites and portions out of the food. I think I've delivered 23 pizzas so far and every single one is missing 2-3 slices.</p>
+      <p>Della says with enough investors we can get off the ground and go nationwide. But I'm still not sure where the profit is supposed to come from.</p>
+    </div>
+  </div>
+
+  <!-- STORY 17 -->
+  <div class="story">
+    <div class="story-header">
+      <span class="story-date">SEP 13, 2025</span>
+      <h2 class="story-title">The Dog Breath Research Project</h2>
+    </div>
+    <div class="story-body">
+      <p>Dog breath has plagued both man and his best friend since both first broke bread. At last the simplicity of the solution was on our plate all along. The breath isn't the issue — it's the last thing you eat that decides your oral bouquet. So all we have to do is find the best food to be the last thing a dog eats in a meal to preserve our bond and our noses.</p>
+      <p>Sadly Della explained that my human nose just isn't sophisticated enough, so it's up to Oban and Della to find the perfect last bite. So far every 17 restaurants and 4 grocery stores have failed — or so Oban and Della reassure me.</p>
+      <p>But they promise they are getting close and that they think pizza looks like a promising next test. I can only hold my breath and hope we discover the perfect food soon so we can monetize it and get back some of the money I've had to spend on "research."</p>
+    </div>
+  </div>
+
+  <!-- STORY 18 -->
+  <div class="story">
+    <div class="story-header">
+      <span class="story-date">SEP 16, 2025</span>
+      <h2 class="story-title">The Maintenance Report</h2>
+    </div>
+    <div class="story-body">
+      <p>Just finished maintenance and your pups are good to go. Replaced the subwoofer on Oban for better squirrel deterrent. Roasted the paws so they're good for another 6 months or 300 hikes, whichever comes first.</p>
+      <p>Gave Della full detail. Started with a wash, then added a new coat of beige followed by a top coat of wax. Overhauled her shoulders so she should be able to claim even more floors and beds. Lastly, filled them both with carrots so they can run till dinner time or at least till the next trip to the fridge for a snack.</p>
+    </div>
+  </div>
+
+  <!-- STORY 19 -->
+  <div class="story">
+    <div class="story-header">
+      <span class="story-date">SEP 20, 2025</span>
+      <h2 class="story-title">The Trial of Our Generation</h2>
+    </div>
+    <div class="story-body">
+      <p>Coming to you live from three blocks away from the court house where some are calling it "the trial of our generation." Judge Oban carries the heavy burden of deciding the fate of one man. While prosecutor Della leaves little room for the defendant to breathe.</p>
+      <p>The crime? Cooking food and then putting leftovers in the fridge instead of on the floor.</p>
+      <p>Experts say the defendant has only narrowly avoided a guilty verdict due to the evidence mysteriously going missing right before prosecutor Della is about to present it. Or right after Judge Oban asks to examine it in his chamber.</p>
+      <p>Some are speculating this trial is a mark of government corruption. More open-minded people have offered spectral ghosts and a haunted courtroom as an explanation for these mysteries. At the moment we simply have no way of knowing the truth, and it's possible we may never find this missing evidence.</p>
+    </div>
+  </div>
+
+  <!-- STORY 20 -->
+  <div class="story">
+    <div class="story-header">
+      <span class="story-date">SEP 23, 2025</span>
+      <h2 class="story-title">The Heat Hike</h2>
+    </div>
+    <div class="story-body">
+      <p>So hot I had to scoop Della up with a dust pan. Oban needed constant watering and popsicles every few steps to survive. But survive we did. All 32 or .2 miles. I'm not so good at judging distance or reading maps, but Della is sure we made it close to Canada.</p>
+    </div>
+  </div>
+
+  <!-- STORY 21 -->
+  <div class="story">
+    <div class="story-header">
+      <span class="story-date">SEP 30, 2025</span>
+      <h2 class="story-title">Jack the Ripper &amp; Della</h2>
+    </div>
+    <div class="story-body">
+      <p>Be warned: do not fall for the hot new social media trend of uploading face pics to an app that is supposed to analyze your face and show you which famous serial killer you are related to. It's absolutely broken.</p>
+      <p>I tried it with a pic of Della and it kept telling me "100% match to Jack the Ripper" — which is ridiculous, since Della doesn't even know British. She knows English and enough French to get by as a tourist. But zero British. Besides, where would she even get the money for a plane ticket?</p>
+      <p>Complete waste of time.</p>
+    </div>
+  </div>
+
+  <div class="paw-divider">🐾 &nbsp; 🐾 &nbsp; 🐾</div>
+
+  <!-- STORY 22 -->
+  <div class="story">
+    <div class="story-header">
+      <span class="story-date">OCT 18, 2025</span>
+      <h2 class="story-title">The 99¢ Coconut Crimp</h2>
+    </div>
+    <div class="story-body">
+      <p>Barely have time for a pUpdate. Della is just cruising through this hike at top gear. Apparently there's some sale going on — 99 cooked coconut crimp for 99¢. It spells shrimp with a 'C' so Oban and I are a little skeptical, but Della promises it will be worth it. She really needs to use her new credit card with a $25,000 spending limit to get her flyer points.</p>
+      <p>And we all know how much Della loves her Delta miles.</p>
+    </div>
+  </div>
+
+  <!-- STORY 23 -->
+  <div class="story">
+    <div class="story-header">
+      <span class="story-date">OCT 21, 2025</span>
+      <h2 class="story-title">Mountain People</h2>
+    </div>
+    <div class="story-body">
+      <p>I got a day. Oban and I are tired of the mountain people trying to kidnap unsuspecting hikers. Every day we have to glue shiny bottle caps to rocks, haul them up the mountain, and throw them at lurking mountain people to drive them off.</p>
+      <p>The local government should put up a fence or something. Why even pay taxes if a mountain dweller is just gonna abduct you, eat your flesh raw, and use your bones to make shitty wind instruments so they can play haunting music at night? The HOA should do something about this with how much Oban and I pay in dues each month.</p>
+    </div>
+  </div>
+
+  <!-- STORY 24 -->
+  <div class="story">
+    <div class="story-header">
+      <span class="story-date">OCT 28, 2025</span>
+      <h2 class="story-title">The Bank Robbery (Della's Version)</h2>
+    </div>
+    <div class="story-body">
+      <p>She can hardly be blamed. Della had no idea the bank we stopped at was about to be robbed. And it's only natural Della would put on a ski mask she found to try and blend in with the robbers to avoid getting shot. Naturally, who could blame her for driving the getaway car rather than risk being discovered and treated to all manner of pain by those bank robbing brutes?</p>
+      <p>And after their getaway plane mysteriously crashed somewhere in South America — there's just no way Della can be blamed for surviving and using those ill-gotten gains to travel back home. Certainly she's just a dog, so how can she be expected to travel efficiently? It's only natural she would take a meandering course through several tourist hot spots, using the stolen money to survive the only way she knew how — which happened to involve a lot of frozen strawberry margaritas and overnights in a series of 5-star hotels.</p>
+      <p>She was so far from home. She just wanted to feel safe in a penthouse suite. Who could possibly blame her?</p>
+    </div>
+  </div>
+
+</div>
+
+<div class="nav-footer">
+  <a href="chapter5.html" class="nav-link">← Chapter One</a>
+  <span class="nav-center">Chapter Two of Four</span>
+  <a href="chapter7.html" class="nav-link">Chapter Three →</a>
+</div>
+
+</body>
+</html>
