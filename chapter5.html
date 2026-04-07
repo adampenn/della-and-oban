@@ -281,8 +281,8 @@
     <div class="story-body">
       <p>15 minutes of good weather and allergy season has already hit me hard. The sneezing is endless, the stuffy sensation is just frustration manifest. It's why I didn't ask "what does a dog know about allergy medicine? Where is Oban keeping these pills without his pants pockets? Can doctors even go to med school?" But I didn't. I just wanted relief. And so here I am — hours? Days later — in the trunk of my car telling you the last things that were searched for on my phone:</p>
       <p>— Where is pasta from<br>
-      — How to get to Italy<br>
-      — Can dogs fly first class</p>
+ — How to get to Italy<br>
+ — Can dogs fly first class</p>
       <p>I hope this helps track them down. Good luck.</p>
     </div>
     <div class="reaction">Kelsey reacted: ✈️ ✈️</div>
@@ -468,7 +468,7 @@
       <h2 class="story-title">That Competitive Spirit</h2>
     </div>
     <div class="story-body">
-      <p>Real challenging day. Oban's got that competitive mindset, that need for speed. Once he realized Della was ahead he couldn't help but rush like the wind. The images may be still frames but you can tell we were going a good 4 or 5 miles an hour. Which isn't a lot but he could keep it up for weeks, and that's like a hundred miles if you think about it.</p>
+      <p>Real challenging day. Oban's got that competitive mindset, that need for speed. Once he realized Della was ahead he couldn't help but rush like the wind. The images may be still frames but you can tell we we're going a good 4 or 5 miles an hour. Which isn't a lot but he could keep it up for weeks, and that's like a hundred miles if you think about it.</p>
     </div>
     <div class="reaction">Kelsey: 😍😍😍</div>
   </div>
@@ -871,6 +871,167 @@
   <span class="nav-center">Chapter One of Four</span>
   <a href="chapter6.html" class="nav-link">Chapter Two →</a>
 </div>
+
+
+<style>
+  .feedback-bar {
+    margin-top: 18px;
+    text-align: right;
+  }
+  .feedback-toggle {
+    background: none;
+    border: none;
+    color: #b0a090;
+    font-size: 0.78em;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    padding: 0;
+    opacity: 0.6;
+    transition: opacity 0.15s;
+    font-family: 'Lato', Georgia, serif;
+  }
+  .feedback-toggle:hover { opacity: 1; }
+  .feedback-form {
+    display: none;
+    margin-top: 10px;
+    text-align: left;
+    background: rgba(0,0,0,0.04);
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 6px;
+    padding: 14px 16px;
+  }
+  .feedback-form.open { display: block; }
+  .feedback-form label {
+    display: block;
+    font-size: 0.78em;
+    color: #8a7060;
+    margin-bottom: 6px;
+    letter-spacing: 0.3px;
+  }
+  .feedback-form textarea {
+    width: 100%;
+    min-height: 72px;
+    border: 1px solid #d0c0b0;
+    border-radius: 4px;
+    padding: 8px 10px;
+    font-family: 'Lato', Georgia, serif;
+    font-size: 0.88em;
+    color: #2e1a0e;
+    background: #fff;
+    resize: vertical;
+    box-sizing: border-box;
+  }
+  .feedback-form textarea:focus { outline: none; border-color: #b87333; }
+  .feedback-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 8px;
+  }
+  .feedback-submit {
+    background: #5c3010;
+    color: #f5e6c8;
+    border: none;
+    border-radius: 4px;
+    padding: 6px 16px;
+    font-size: 0.82em;
+    cursor: pointer;
+    font-family: 'Lato', Georgia, serif;
+    letter-spacing: 0.5px;
+    transition: background 0.15s;
+  }
+  .feedback-submit:hover { background: #7a4020; }
+  .feedback-cancel {
+    background: none;
+    border: none;
+    color: #9a8070;
+    font-size: 0.78em;
+    cursor: pointer;
+    font-family: 'Lato', Georgia, serif;
+  }
+  .feedback-cancel:hover { color: #5c3010; }
+  .test-badge {
+    position: fixed;
+    top: 12px;
+    right: 14px;
+    background: rgba(180,100,30,0.9);
+    color: #fff;
+    font-size: 0.68em;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 20px;
+    z-index: 999;
+    font-family: 'Lato', Georgia, serif;
+    pointer-events: none;
+  }
+</style>
+
+<div class="test-badge">Test Mode</div>
+
+<script>
+(function() {
+  var recipient = "madannep@gmail.com";
+
+  document.querySelectorAll('.story').forEach(function(story) {
+    var dateEl = story.querySelector('.story-date');
+    var titleEl = story.querySelector('.story-title');
+    var date = dateEl ? dateEl.textContent.trim() : '';
+    var title = titleEl ? titleEl.textContent.trim() : '';
+    var chapter = document.querySelector('.chapter-label') ?
+                  document.querySelector('.chapter-label').textContent.trim() : '';
+
+    var bar = document.createElement('div');
+    bar.className = 'feedback-bar';
+
+    var btn = document.createElement('button');
+    btn.className = 'feedback-toggle';
+    btn.textContent = '✏️ Suggest an edit';
+
+    var form = document.createElement('div');
+    form.className = 'feedback-form';
+    form.innerHTML =
+      '<label>Your suggestion for "<em>' + title + '</em>" (' + date + '):</label>' +
+      '<textarea placeholder="e.g. Fix the typo in paragraph 2, or suggest a better title…"></textarea>' +
+      '<div class="feedback-actions">' +
+        '<button class="feedback-cancel">Cancel</button>' +
+        '<button class="feedback-submit">Send to Adam →</button>' +
+      '</div>';
+
+    btn.addEventListener('click', function() {
+      form.classList.toggle('open');
+      btn.textContent = form.classList.contains('open') ? '✏️ Close' : '✏️ Suggest an edit';
+    });
+
+    form.querySelector('.feedback-cancel').addEventListener('click', function() {
+      form.classList.remove('open');
+      btn.textContent = '✏️ Suggest an edit';
+      form.querySelector('textarea').value = '';
+    });
+
+    form.querySelector('.feedback-submit').addEventListener('click', function() {
+      var text = form.querySelector('textarea').value.trim();
+      if (!text) { form.querySelector('textarea').focus(); return; }
+      var subject = encodeURIComponent('Story edit: ' + title + ' (' + date + ')');
+      var body = encodeURIComponent(
+        chapter + '\n' +
+        date + ' — ' + title + '\n\n' +
+        'Suggestion:\n' + text
+      );
+      window.location.href = 'mailto:' + recipient + '?subject=' + subject + '&body=' + body;
+      form.classList.remove('open');
+      btn.textContent = '✏️ Suggest an edit';
+      form.querySelector('textarea').value = '';
+    });
+
+    bar.appendChild(btn);
+    bar.appendChild(form);
+
+    var body = story.querySelector('.story-body');
+    if (body) body.appendChild(bar);
+  });
+})();
+</script>
 
 </body>
 </html>

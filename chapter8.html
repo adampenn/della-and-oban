@@ -625,5 +625,166 @@
   <a href="index.html" class="nav-link">↩ Back to Cover</a>
 </div>
 
+
+<style>
+  .feedback-bar {
+    margin-top: 18px;
+    text-align: right;
+  }
+  .feedback-toggle {
+    background: none;
+    border: none;
+    color: #b0a090;
+    font-size: 0.78em;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    padding: 0;
+    opacity: 0.6;
+    transition: opacity 0.15s;
+    font-family: 'Lato', Georgia, serif;
+  }
+  .feedback-toggle:hover { opacity: 1; }
+  .feedback-form {
+    display: none;
+    margin-top: 10px;
+    text-align: left;
+    background: rgba(0,0,0,0.04);
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 6px;
+    padding: 14px 16px;
+  }
+  .feedback-form.open { display: block; }
+  .feedback-form label {
+    display: block;
+    font-size: 0.78em;
+    color: #8a7060;
+    margin-bottom: 6px;
+    letter-spacing: 0.3px;
+  }
+  .feedback-form textarea {
+    width: 100%;
+    min-height: 72px;
+    border: 1px solid #d0c0b0;
+    border-radius: 4px;
+    padding: 8px 10px;
+    font-family: 'Lato', Georgia, serif;
+    font-size: 0.88em;
+    color: #2e1a0e;
+    background: #fff;
+    resize: vertical;
+    box-sizing: border-box;
+  }
+  .feedback-form textarea:focus { outline: none; border-color: #b87333; }
+  .feedback-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 8px;
+  }
+  .feedback-submit {
+    background: #5c3010;
+    color: #f5e6c8;
+    border: none;
+    border-radius: 4px;
+    padding: 6px 16px;
+    font-size: 0.82em;
+    cursor: pointer;
+    font-family: 'Lato', Georgia, serif;
+    letter-spacing: 0.5px;
+    transition: background 0.15s;
+  }
+  .feedback-submit:hover { background: #7a4020; }
+  .feedback-cancel {
+    background: none;
+    border: none;
+    color: #9a8070;
+    font-size: 0.78em;
+    cursor: pointer;
+    font-family: 'Lato', Georgia, serif;
+  }
+  .feedback-cancel:hover { color: #5c3010; }
+  .test-badge {
+    position: fixed;
+    top: 12px;
+    right: 14px;
+    background: rgba(180,100,30,0.9);
+    color: #fff;
+    font-size: 0.68em;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 20px;
+    z-index: 999;
+    font-family: 'Lato', Georgia, serif;
+    pointer-events: none;
+  }
+</style>
+
+<div class="test-badge">Test Mode</div>
+
+<script>
+(function() {
+  var recipient = "madannep@gmail.com";
+
+  document.querySelectorAll('.story').forEach(function(story) {
+    var dateEl = story.querySelector('.story-date');
+    var titleEl = story.querySelector('.story-title');
+    var date = dateEl ? dateEl.textContent.trim() : '';
+    var title = titleEl ? titleEl.textContent.trim() : '';
+    var chapter = document.querySelector('.chapter-label') ?
+                  document.querySelector('.chapter-label').textContent.trim() : '';
+
+    var bar = document.createElement('div');
+    bar.className = 'feedback-bar';
+
+    var btn = document.createElement('button');
+    btn.className = 'feedback-toggle';
+    btn.textContent = '✏️ Suggest an edit';
+
+    var form = document.createElement('div');
+    form.className = 'feedback-form';
+    form.innerHTML =
+      '<label>Your suggestion for "<em>' + title + '</em>" (' + date + '):</label>' +
+      '<textarea placeholder="e.g. Fix the typo in paragraph 2, or suggest a better title…"></textarea>' +
+      '<div class="feedback-actions">' +
+        '<button class="feedback-cancel">Cancel</button>' +
+        '<button class="feedback-submit">Send to Adam →</button>' +
+      '</div>';
+
+    btn.addEventListener('click', function() {
+      form.classList.toggle('open');
+      btn.textContent = form.classList.contains('open') ? '✏️ Close' : '✏️ Suggest an edit';
+    });
+
+    form.querySelector('.feedback-cancel').addEventListener('click', function() {
+      form.classList.remove('open');
+      btn.textContent = '✏️ Suggest an edit';
+      form.querySelector('textarea').value = '';
+    });
+
+    form.querySelector('.feedback-submit').addEventListener('click', function() {
+      var text = form.querySelector('textarea').value.trim();
+      if (!text) { form.querySelector('textarea').focus(); return; }
+      var subject = encodeURIComponent('Story edit: ' + title + ' (' + date + ')');
+      var body = encodeURIComponent(
+        chapter + '\n' +
+        date + ' — ' + title + '\n\n' +
+        'Suggestion:\n' + text
+      );
+      window.location.href = 'mailto:' + recipient + '?subject=' + subject + '&body=' + body;
+      form.classList.remove('open');
+      btn.textContent = '✏️ Suggest an edit';
+      form.querySelector('textarea').value = '';
+    });
+
+    bar.appendChild(btn);
+    bar.appendChild(form);
+
+    var body = story.querySelector('.story-body');
+    if (body) body.appendChild(bar);
+  });
+})();
+</script>
+
 </body>
 </html>
